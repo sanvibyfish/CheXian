@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World, CheXianActivity!</string>
+    <string name="app_name">CheXian</string>
+        <string name="text_timeout_error">连接超时,请重试!</string>
+    <string name="text_data_parse_error">数据解析出错!</string>
+    <string name="text_unknown_error">未知错误!</string>
+</resources>
