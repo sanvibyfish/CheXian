@@ -22,10 +22,5 @@ public class Group<T extends Result> extends ArrayList<T> implements Result {
 		super(collection);
 	}
 
-	@Override
-	public <T extends Result> T initFormJson(JSONObject jsonObject) {
-		// TODO Auto-generated method stub
-		return null;
-	}
 
 }

@@ -44,7 +44,7 @@ public class JsonToObjectUtils {
 		T returnResult = null;
 		try {
 			Result result = (Result)clazz.newInstance();
-			returnResult = result.initFormJson(jsonObject);
+//			returnResult = result.initFormJson(jsonObject);
 		} catch (IllegalAccessException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

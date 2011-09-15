@@ -11,5 +11,5 @@ import org.json.JSONObject;
  * @version 创建时间：2010-8-31 下午01:18:16
  */
 public interface Result {
-	public <T extends Result>  T initFormJson(JSONObject  jsonObject);
+//	public <T extends Result>  T initFormJson(JSONObject  jsonObject);
 }

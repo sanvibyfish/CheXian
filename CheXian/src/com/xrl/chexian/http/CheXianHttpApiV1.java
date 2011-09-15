@@ -9,6 +9,7 @@ import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.message.BasicNameValuePair;
 
 import com.xrl.chexian.Settings;
+import com.xrl.chexian.model.Group;
 
 import android.util.Log;
 
@@ -24,7 +25,7 @@ public class CheXianHttpApiV1 {
 
 	private static CheXianHttpApiV1 instance = null;
 	
-	private static final String URL_API_REGION_LIST = "/";
+	private static final String URL_API_MODEL_QUERY = "/ebusiness/auto/ris/combo-model-query.do";
 	
 	
 //	private static final int pageSize = 10;
@@ -51,6 +52,14 @@ public class CheXianHttpApiV1 {
 		mHttpApi = new HttpApiWithOAuth(mHttpClient, clientVersion);
 	}
 	
+//	public Group<RegionMobile> getRegionMobileList() throws Exception{
+//		HttpGet httpGet = mHttpApi.createHttpGet(fullUrl(URL_API_MODEL_QUERY),
+//				new BasicNameValuePair("output", Settings.OUTPUT));
+//		Group<RegionMobile> cities = (Group<RegionMobile>) mHttpApi.doHttpRequest(httpGet, RegionMobile.class);
+//		if(DEBUG)Log.d(TAG, "city size:" + cities.size());
+//		return cities;
+//	}
+//	
     
 
 }
