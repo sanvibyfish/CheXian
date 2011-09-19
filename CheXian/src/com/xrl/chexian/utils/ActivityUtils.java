@@ -22,27 +22,7 @@ import android.widget.Toast;
  */
 public class ActivityUtils {
 
-	public static final int CITY_CHANGE_ACTIVITY = 10;
-	public static final int LOGIN_ACTIVITY = 11;
-	public static final int POST_ACTIVITY = 12;
-	public static final int CHANNEL_ACTIVITY = 13;
-	public static final int DISTRICT_ACTIVITY = 14;
-	public static final int POST_DETAIL_ACTIVITY = 15;
-	public static final int NEAR_SEND_MESSAGE_ACTIVITY = 16;
-	public static final int CHECKIN_ACTIVITY = 17;
-	public static final int CHECIN_MAP_ACTIVITY = 18;
-	public static final int MAIN_ACTIVITY = 19;
-	public static final int REGISTER_ACTIVITY = 20;
-	public static final int NEAR_ACTIVITY = 21;
-	public static final int GROUPON_ACTIVITY = 22;
-	public static final int GROUPON_DETAIL_ACTIVITY = 23;
-	public static final int MORE_ACTIVITY = 24;
-	public static final int NEAR_MESSAGE_DETAIL_ACTIVITY = 25;
-	public static final int NEAR_MEMBER_DETAIL_ACTIVITY = 26;
-	public static final int CHOOSE_CITY_ACTIVITY = 27;
-	public static final int MEMBER_DETAIL_ACTIVITY = 28; 
-	public static final int GROUPON_CHANNELS_ACTIVITY = 29;
-	
+	public static final int MODEL_QUERY_ACTIVITY = 10;
 	
 	private static final String TAG = "ActivityUtils";
 	private static final boolean DEBUG = Settings.DEBUG; 

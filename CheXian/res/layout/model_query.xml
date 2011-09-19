@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:background="@drawable/beijing" android:layout_height="fill_parent">
+	<LinearLayout android:background="@drawable/hengtiao" 
+		android:layout_height="wrap_content" android:layout_width="wrap_content">
+		<TextView android:layout_height="wrap_content" android:layout_width="wrap_content"
+		android:text="车辆信息" android:textColor="#000000" android:textSize="20dp" android:layout_marginTop="10dp"
+		android:layout_marginLeft="18dp"
+		/>
+		<ImageView android:src="@drawable/jindu"  
+		android:layout_marginLeft="40dp" android:layout_marginTop="5dp"
+		android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+	</LinearLayout>
+	
+	
+	<LinearLayout android:layout_height="fill_parent" android:layout_weight="1" 
+		android:layout_marginLeft="9dp" android:layout_marginTop="10dp"
+		android:layout_width="wrap_content" android:orientation="vertical">
+		
+		<LinearLayout android:layout_height="wrap_content"
+			android:background="@drawable/shang" android:layout_width="wrap_content"
+			android:orientation="horizontal">
+			<RelativeLayout android:layout_width="wrap_content"
+				android:layout_marginLeft="10dp" android:layout_marginTop="7dp"
+				android:layout_height="wrap_content">
+				<TextView android:paddingLeft="6dp"
+					android:background="@drawable/query_model_textview"
+					android:gravity="center_vertical" android:layout_width="wrap_content"
+					android:layout_height="wrap_content" android:text="车辆行驶城市" />
+				<Spinner android:background="@drawable/query_model_button"
+				android:id="@+id/query_model_city_sp"
+					android:layout_marginLeft="90dp" android:layout_width="wrap_content"
+					android:layout_height="wrap_content" />
+			</RelativeLayout>
+		</LinearLayout>
+		
+		<LinearLayout android:layout_height="wrap_content"
+			android:background="@drawable/xian" android:layout_width="wrap_content">
+		</LinearLayout>
+		
+		<LinearLayout android:layout_height="wrap_content"
+			android:background="@drawable/query_model_bottom" android:orientation="horizontal" android:layout_width="wrap_content">
+			<RelativeLayout android:layout_width="wrap_content"
+				android:layout_marginLeft="10dp" android:layout_marginTop="7dp"
+				android:layout_height="wrap_content">
+				<TextView android:paddingLeft="6dp"
+					android:background="@drawable/query_model_textview"
+					android:gravity="center_vertical" android:layout_width="wrap_content"
+					android:layout_height="wrap_content" android:text="车牌号" />
+				<EditText android:background="@drawable/model_query_edittext"
+					android:layout_marginLeft="55dp" android:layout_width="wrap_content"
+					android:layout_height="wrap_content" />
+			</RelativeLayout>
+			<Button 
+			android:layout_width="wrap_content" android:layout_height="wrap_content" 
+			android:layout_marginLeft="5dp"
+			 android:layout_marginTop="7dp" 
+			 android:background="@drawable/query_model_chepai"></Button>
+		</LinearLayout>
+		
+		<ImageView android:src="@drawable/query_model_guanggao"
+		 android:layout_height="wrap_content"
+		android:layout_width="wrap_content" />
+			
+	<LinearLayout android:layout_height="wrap_content"
+		android:layout_width="wrap_content" android:orientation="vertical">
+
+		<LinearLayout android:layout_height="wrap_content"
+			android:background="@drawable/shang" android:layout_width="wrap_content"
+			android:orientation="horizontal">
+			<RelativeLayout android:layout_width="wrap_content"
+				android:layout_marginLeft="10dp" android:layout_marginTop="7dp"
+				android:layout_height="wrap_content">
+				<TextView android:paddingLeft="6dp"
+					android:background="@drawable/query_model_textview"
+					android:gravity="center_vertical" android:layout_width="wrap_content"
+					android:layout_height="wrap_content" android:text="车辆登记年月" />
+				<Button android:background="@drawable/query_model_button"
+				android:id="@+id/model_query_register_date_button"
+					android:layout_marginLeft="90dp" android:layout_width="wrap_content"
+					android:layout_height="wrap_content" />
+			</RelativeLayout>
+		</LinearLayout>
+
+		<LinearLayout android:layout_height="wrap_content"
+			android:background="@drawable/xian" android:layout_width="wrap_content">
+		</LinearLayout>
+		
+		<LinearLayout android:layout_height="wrap_content"
+			android:background="@drawable/query_model_middle"
+			android:layout_width="wrap_content" android:orientation="horizontal">
+			<RelativeLayout android:layout_width="wrap_content"
+				android:layout_marginLeft="10dp" android:layout_marginTop="7dp"
+				android:layout_height="wrap_content">
+				<TextView android:paddingLeft="6dp"
+					android:background="@drawable/query_model_textview"
+					android:gravity="center_vertical" android:layout_width="wrap_content"
+					android:layout_height="wrap_content" android:text="商业保险起期" />
+				<Button android:background="@drawable/query_model_button"
+				android:id="@+id/model_query_insurance_button"
+					android:layout_marginLeft="90dp" android:layout_width="wrap_content"
+					android:layout_height="wrap_content" />
+			</RelativeLayout>
+		</LinearLayout>
+
+		<LinearLayout android:layout_height="wrap_content"
+			android:background="@drawable/xian" android:layout_width="wrap_content">
+		</LinearLayout>
+		
+		<LinearLayout android:layout_height="wrap_content"
+			android:background="@drawable/query_model_middle"
+			android:layout_width="wrap_content" android:orientation="horizontal">
+			<RelativeLayout android:layout_width="wrap_content"
+				android:layout_marginLeft="10dp" android:layout_marginTop="7dp"
+				android:layout_height="wrap_content">
+				<TextView android:paddingLeft="6dp"
+					android:background="@drawable/query_model_textview"
+					android:gravity="center_vertical" android:layout_width="wrap_content"
+					android:layout_height="wrap_content" android:text="交强险保险起期" />
+				<Button android:background="@drawable/query_model_button"
+					android:layout_marginLeft="90dp" android:layout_width="wrap_content"
+					android:layout_height="wrap_content" />
+			</RelativeLayout>
+		</LinearLayout>
+		
+		<LinearLayout android:layout_height="wrap_content"
+			android:background="@drawable/xian" android:layout_width="wrap_content">
+		</LinearLayout>
+		
+		
+		<LinearLayout android:layout_height="wrap_content"
+			android:background="@drawable/query_model_bottom"
+			android:layout_width="wrap_content" android:orientation="horizontal">
+			<RelativeLayout android:layout_width="wrap_content"
+				android:layout_marginLeft="10dp" android:layout_marginTop="7dp"
+				android:layout_height="wrap_content">
+				<TextView android:paddingLeft="6dp"
+					android:background="@drawable/query_model_textview"
+					android:gravity="center_vertical" android:layout_width="wrap_content"
+					android:layout_height="wrap_content" android:text="发改委码" />
+				<Button android:background="@drawable/query_model_button"
+					android:layout_marginLeft="90dp" android:layout_width="wrap_content"
+					android:layout_height="wrap_content" />
+			</RelativeLayout>
+		</LinearLayout>
+		
+	</LinearLayout>
+	</LinearLayout>
+	
+	<LinearLayout
+	android:orientation="horizontal"
+	 android:layout_height="wrap_content" android:layout_width="wrap_content" >
+	<Button android:background="@drawable/left_button"  android:textColor="#FFFFFF" android:textSize="24dp"
+	android:text="上一步" android:paddingRight="48dp"
+	 android:layout_height="wrap_content" android:layout_width="wrap_content" />
+	<Button android:background="@drawable/right_button"  android:textSize="24dp" android:paddingLeft="48dp"
+	android:layout_marginLeft="42dp" android:text="下一步" android:textColor="#FFFFFF"
+	  android:layout_height="wrap_content" android:layout_width="wrap_content" />
+	</LinearLayout>
+</LinearLayout>
