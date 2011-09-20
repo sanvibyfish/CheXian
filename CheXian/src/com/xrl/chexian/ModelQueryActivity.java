@@ -34,8 +34,7 @@ public class ModelQueryActivity extends Activity {
 	static final int DATE_DIALOG_ID = 1;
 	static final int DATE_INSURANCE = 2;
 	private void updateDisplay(Button btn) {
-		btn.setText(new StringBuilder().append(mYear).append("-")
-				.append(mMonth + 1));
+
 	}
 
 	private DatePickerDialog.OnDateSetListener mInsuranceDateSetListener = new DatePickerDialog.OnDateSetListener() {
@@ -45,7 +44,8 @@ public class ModelQueryActivity extends Activity {
 			mYear = year;
 			mMonth = monthOfYear;
 			mDay = dayOfMonth;
-			updateDisplay(btnRegisterDate);
+			btnInsurance.setText(new StringBuilder().append(mYear).append("-")
+					.append(mMonth + 1).append("-").append(mDay));
 		}
 	};
 	
@@ -56,7 +56,9 @@ public class ModelQueryActivity extends Activity {
 			mYear = year;
 			mMonth = monthOfYear;
 			mDay = dayOfMonth;
-			updateDisplay(btnInsurance);
+			btnRegisterDate.setText(new StringBuilder().append(mYear).append("-")
+					.append(mMonth + 1));
+
 		}
 	};
 	private Button btnInsurance;
