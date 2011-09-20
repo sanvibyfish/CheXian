@@ -32,19 +32,16 @@ public class ModelQueryActivity extends Activity {
 	private int mDay;
 
 	static final int DATE_DIALOG_ID = 1;
-	static final int DATE_INSURANCE = 2;
-	private void updateDisplay(Button btn) {
+	static final int DATE_BISINESS_INSURANCE = 2;
 
-	}
-
-	private DatePickerDialog.OnDateSetListener mInsuranceDateSetListener = new DatePickerDialog.OnDateSetListener() {
+	private DatePickerDialog.OnDateSetListener mBusinessInsuranceDateSetListener = new DatePickerDialog.OnDateSetListener() {
 
 		public void onDateSet(DatePicker view, int year, int monthOfYear,
 				int dayOfMonth) {
 			mYear = year;
 			mMonth = monthOfYear;
 			mDay = dayOfMonth;
-			btnInsurance.setText(new StringBuilder().append(mYear).append("-")
+			btnBusinessInsurance.setText(new StringBuilder().append(mYear).append("-")
 					.append(mMonth + 1).append("-").append(mDay));
 		}
 	};
@@ -61,7 +58,7 @@ public class ModelQueryActivity extends Activity {
 
 		}
 	};
-	private Button btnInsurance;
+	private Button btnBusinessInsurance;
 
 	@Override
 	protected Dialog onCreateDialog(int id) {
@@ -69,8 +66,8 @@ public class ModelQueryActivity extends Activity {
 		case DATE_DIALOG_ID:
 			return new DatePickerDialog(this, mDateSetListener, mYear, mMonth,
 					mDay);
-		case DATE_INSURANCE:
-			return new DatePickerDialog(this, mInsuranceDateSetListener, mYear, mMonth,
+		case DATE_BISINESS_INSURANCE:
+			return new DatePickerDialog(this, mBusinessInsuranceDateSetListener, mYear, mMonth,
 					mDay);
 		}
 		return null;
@@ -102,12 +99,12 @@ public class ModelQueryActivity extends Activity {
 		// adapter = new ArrayAdapter(this,android.R.layout.simple_spinner_item,
 		// cities);
 		// spQueryModelCity.setAdapter(adapter);
-		btnInsurance = (Button) findViewById(R.id.model_query_insurance_button);
-		btnInsurance.setOnClickListener(new OnClickListener() {
+		btnBusinessInsurance = (Button) findViewById(R.id.model_query_insurance_button);
+		btnBusinessInsurance.setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
-				showDialog(DATE_INSURANCE);
+				showDialog(DATE_BISINESS_INSURANCE);
 			}
 		});
 		
