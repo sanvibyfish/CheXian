@@ -11,7 +11,7 @@ import android.widget.Button;
 public class CheXianActivity extends Activity {
     private Button btnQuote;
 
-    //修改备注
+    //修改备注  
 	/** Called when the activity is first created. */
     @Override
     public void onCreate(Bundle savedInstanceState) {
