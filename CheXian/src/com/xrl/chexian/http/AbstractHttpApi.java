@@ -3,6 +3,7 @@ package com.xrl.chexian.http;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.UnsupportedEncodingException;
+import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -32,11 +33,16 @@ import org.json.JSONObject;
 
 import android.util.Log;
 
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+import com.xrl.chexian.ModelQueryActivity;
 import com.xrl.chexian.Settings;
 import com.xrl.chexian.error.CheXianException;
+import com.xrl.chexian.model.ModelQuery;
 import com.xrl.chexian.model.Result;
 import com.xrl.chexian.utils.JsonToObjectUtils;
 import com.xrl.chexian.utils.StringUtils;
+import com.xrl.chexian.utils.gson.GsonUtils;
 
 
 public abstract class AbstractHttpApi implements HttpApi {
@@ -66,25 +72,38 @@ public abstract class AbstractHttpApi implements HttpApi {
         String responseString =  StringUtils.convertStreamToString(is);
         JSONObject jsonResponse = new JSONObject(responseString);
         if(DEBUG)Log.d(TAG,"responseString:" + responseString);
-        boolean succeeded = jsonResponse.getBoolean("succeeded");
-        if(succeeded){
-        	if(jsonResponse.has("successResult")){
-        		if(DEBUG)Log.d(TAG, "successResult:\n" + jsonResponse.getString("successResult"));
-        		Object obj = jsonResponse.get("successResult");
-        		if(obj instanceof JSONObject){
-        			JSONObject successResultObject = jsonResponse.getJSONObject("successResult");  
-        			return  JsonToObjectUtils.getInstance().convertResult(successResultObject, clazz);
-        		}else if(obj instanceof JSONArray){
-        			JSONArray successResultJSONArray = jsonResponse.getJSONArray("successResult");  
-        			return  JsonToObjectUtils.getInstance().convertResult(successResultJSONArray, clazz);
-        		}
-        	}else{
-        		return null;
-        	}
-        }else{
-        	String message = jsonResponse.getString("message");
-        	throw new CheXianException("", message);
-        }
+        int  requestCode = jsonResponse.getInt("requestCode");
+        switch (requestCode) {
+		case 11:
+			throw new CheXianException("", "你的客户端版本过低");
+		case 12:
+			throw new CheXianException("", "你所选择的机构不存在或未开通网销");
+		case 13:
+			throw new CheXianException("","选择机构不支持此客户端类型");
+		case 0:
+			ModelQuery mq = GsonUtils.getInstance().json2bean(responseString, clazz);
+			return mq;
+		default:
+			
+		}
+//        if(succeeded){
+//        	if(jsonResponse.has("successResult")){
+//        		if(DEBUG)Log.d(TAG, "successResult:\n" + jsonResponse.getString("successResult"));
+//        		Object obj = jsonResponse.get("successResult");
+//        		if(obj instanceof JSONObject){
+//        			JSONObject successResultObject = jsonResponse.getJSONObject("successResult");  
+//        			return  JsonToObjectUtils.getInstance().convertResult(successResultObject, clazz);
+//        		}else if(obj instanceof JSONArray){
+//        			JSONArray successResultJSONArray = jsonResponse.getJSONArray("successResult");  
+//        			return  JsonToObjectUtils.getInstance().convertResult(successResultJSONArray, clazz);
+//        		}
+//        	}else{
+//        		return null;
+//        	}
+//        }else{
+//        	String message = jsonResponse.getString("message");
+//        	throw new CheXianException("", message);
+//        }
 		return null;
     }
     public InputStream executeHttpRequestSuccess(HttpRequestBase httpRequest) throws Exception{

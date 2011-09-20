@@ -19,6 +19,7 @@ import android.widget.Spinner;
 
 import com.google.gson.Gson;
 import com.xrl.chexian.model.City;
+import com.xrl.chexian.utils.ActivityUtils;
 import com.xrl.chexian.utils.StringUtils;
 
 public class ModelQueryActivity extends Activity {
@@ -31,8 +32,9 @@ public class ModelQueryActivity extends Activity {
 	private int mMonth;
 	private int mDay;
 
-	static final int DATE_DIALOG_ID = 1;
+	static final int DATE_REGISTER = 1;
 	static final int DATE_BISINESS_INSURANCE = 2;
+	static final int DATE_INSURANCE = 3;
 
 	private DatePickerDialog.OnDateSetListener mBusinessInsuranceDateSetListener = new DatePickerDialog.OnDateSetListener() {
 
@@ -46,7 +48,19 @@ public class ModelQueryActivity extends Activity {
 		}
 	};
 	
-	private DatePickerDialog.OnDateSetListener mDateSetListener = new DatePickerDialog.OnDateSetListener() {
+	private DatePickerDialog.OnDateSetListener mInsuranceDateSetListener = new DatePickerDialog.OnDateSetListener() {
+
+		public void onDateSet(DatePicker view, int year, int monthOfYear,
+				int dayOfMonth) {
+			mYear = year;
+			mMonth = monthOfYear;
+			mDay = dayOfMonth;
+			btnInsurance.setText(new StringBuilder().append(mYear).append("-")
+					.append(mMonth + 1).append("-").append(mDay));
+		}
+	};
+	
+	private DatePickerDialog.OnDateSetListener mRegisterDateSetListener = new DatePickerDialog.OnDateSetListener() {
 
 		public void onDateSet(DatePicker view, int year, int monthOfYear,
 				int dayOfMonth) {
@@ -59,16 +73,22 @@ public class ModelQueryActivity extends Activity {
 		}
 	};
 	private Button btnBusinessInsurance;
-
+	private Button btnInsurance;
+	private Button btnBack;
+	private Button btnNewCard;
+	private boolean isNewCard;
 	@Override
 	protected Dialog onCreateDialog(int id) {
 		switch (id) {
-		case DATE_DIALOG_ID:
-			return new DatePickerDialog(this, mDateSetListener, mYear, mMonth,
+		case DATE_REGISTER:
+			return new DatePickerDialog(this, mRegisterDateSetListener, mYear, mMonth,
 					mDay);
 		case DATE_BISINESS_INSURANCE:
 			return new DatePickerDialog(this, mBusinessInsuranceDateSetListener, mYear, mMonth,
 					mDay);
+		case DATE_INSURANCE:
+			return new DatePickerDialog(this, mInsuranceDateSetListener, mYear, mMonth,
+					mDay); 
 		}
 		return null;
 	}
@@ -99,7 +119,7 @@ public class ModelQueryActivity extends Activity {
 		// adapter = new ArrayAdapter(this,android.R.layout.simple_spinner_item,
 		// cities);
 		// spQueryModelCity.setAdapter(adapter);
-		btnBusinessInsurance = (Button) findViewById(R.id.model_query_insurance_button);
+		btnBusinessInsurance = (Button) findViewById(R.id.model_query_business_insurance_button);
 		btnBusinessInsurance.setOnClickListener(new OnClickListener() {
 			
 			public void onClick(View v) {
@@ -107,10 +127,45 @@ public class ModelQueryActivity extends Activity {
 			}
 		});
 		
+		
+		btnInsurance = (Button) findViewById(R.id.model_query_insurance_button);
+		btnInsurance.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				showDialog(DATE_INSURANCE);
+			}
+		});
+		
 		btnRegisterDate = (Button) findViewById(R.id.model_query_register_date_button);
 		btnRegisterDate.setOnClickListener(new OnClickListener() {
 			public void onClick(View v) {
-				showDialog(DATE_DIALOG_ID);
+				showDialog(DATE_REGISTER);
+			}
+		});
+		
+		btnBack = (Button)findViewById(R.id.btnBack);
+		btnBack.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				ActivityUtils.back(ModelQueryActivity.this, getIntent());
+			}
+		});
+		
+		btnNewCard = (Button) findViewById(R.id.model_query_new_card_button);
+		btnNewCard.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				if(!isNewCard){
+					isNewCard = true;
+					v.setBackgroundResource(R.drawable.model_query_new_card_pressed);
+				}else{
+					isNewCard = false;
+					v.setBackgroundResource(R.drawable.model_query_new_card_normal);
+							
+				}
 			}
 		});
 	}

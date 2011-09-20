@@ -52,16 +52,21 @@
 					android:layout_marginLeft="55dp" android:layout_width="wrap_content"
 					android:layout_height="wrap_content" />
 			</RelativeLayout>
-			<Button 
+			<Button android:paddingLeft="20dp"
 			android:layout_width="wrap_content" android:layout_height="wrap_content" 
-			android:layout_marginLeft="5dp"
-			 android:layout_marginTop="7dp" 
-			 android:background="@drawable/query_model_chepai"></Button>
+			android:layout_marginLeft="5dp" android:id="@+id/model_query_new_card_button"
+			android:layout_marginTop="7dp"  android:text="新车未上牌"
+			 android:background="@drawable/model_query_new_card_normal"></Button>
 		</LinearLayout>
 		
-		<ImageView android:src="@drawable/query_model_guanggao"
-		 android:layout_height="wrap_content"
+		<LinearLayout android:background="@drawable/query_model_guanggao"
+		 android:layout_height="wrap_content" android:gravity="center"
+		android:layout_width="wrap_content" >
+			<TextView 	android:layout_gravity="center"
+			android:paddingLeft="40dp"
+			android:text="送100元话费，还能抽4999元旅游大奖"	 android:layout_height="wrap_content"
 		android:layout_width="wrap_content" />
+		</LinearLayout>
 			
 	<LinearLayout android:layout_height="wrap_content"
 		android:layout_width="wrap_content" android:orientation="vertical">
@@ -98,7 +103,7 @@
 					android:gravity="center_vertical" android:layout_width="wrap_content"
 					android:layout_height="wrap_content" android:text="商业保险起期" />
 				<Button android:background="@drawable/query_model_button"
-				android:id="@+id/model_query_insurance_button"
+				android:id="@+id/model_query_business_insurance_button"
 					android:layout_marginLeft="90dp" android:layout_width="wrap_content"
 					android:layout_height="wrap_content" />
 			</RelativeLayout>
@@ -118,7 +123,7 @@
 					android:background="@drawable/query_model_textview"
 					android:gravity="center_vertical" android:layout_width="wrap_content"
 					android:layout_height="wrap_content" android:text="交强险保险起期" />
-				<Button android:background="@drawable/query_model_button"
+				<Button android:background="@drawable/query_model_button" android:id="@+id/model_query_insurance_button"
 					android:layout_marginLeft="90dp" android:layout_width="wrap_content"
 					android:layout_height="wrap_content" />
 			</RelativeLayout>
@@ -139,7 +144,7 @@
 					android:background="@drawable/query_model_textview"
 					android:gravity="center_vertical" android:layout_width="wrap_content"
 					android:layout_height="wrap_content" android:text="发改委码" />
-				<Button android:background="@drawable/query_model_button"
+				<Button android:background="@drawable/model_query_code_editext"
 					android:layout_marginLeft="90dp" android:layout_width="wrap_content"
 					android:layout_height="wrap_content" />
 			</RelativeLayout>
@@ -152,10 +157,10 @@
 	android:orientation="horizontal"
 	 android:layout_height="wrap_content" android:layout_width="wrap_content" >
 	<Button android:background="@drawable/left_button"  android:textColor="#FFFFFF" android:textSize="24dp"
-	android:text="上一步" android:paddingRight="48dp"
+	android:text="上一步" android:paddingRight="48dp" android:id="@+id/btnBack"
 	 android:layout_height="wrap_content" android:layout_width="wrap_content" />
 	<Button android:background="@drawable/right_button"  android:textSize="24dp" android:paddingLeft="48dp"
 	android:layout_marginLeft="42dp" android:text="下一步" android:textColor="#FFFFFF"
-	  android:layout_height="wrap_content" android:layout_width="wrap_content" />
+	android:id="@+id/btnNext"  android:layout_height="wrap_content" android:layout_width="wrap_content" />
 	</LinearLayout>
 </LinearLayout>
