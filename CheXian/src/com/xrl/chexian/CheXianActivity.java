@@ -11,6 +11,7 @@ import android.widget.Button;
 public class CheXianActivity extends Activity {
     private Button btnQuote;
     
+    //sadasdasdas
 	/** Called when the activity is first created. */
     @Override
     public void onCreate(Bundle savedInstanceState) {
