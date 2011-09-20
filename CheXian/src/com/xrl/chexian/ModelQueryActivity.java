@@ -102,7 +102,6 @@ public class ModelQueryActivity extends Activity {
 		btnBusinessInsurance = (Button) findViewById(R.id.model_query_insurance_button);
 		btnBusinessInsurance.setOnClickListener(new OnClickListener() {
 			
-			@Override
 			public void onClick(View v) {
 				showDialog(DATE_BISINESS_INSURANCE);
 			}
@@ -110,7 +109,6 @@ public class ModelQueryActivity extends Activity {
 		
 		btnRegisterDate = (Button) findViewById(R.id.model_query_register_date_button);
 		btnRegisterDate.setOnClickListener(new OnClickListener() {
-			@Override
 			public void onClick(View v) {
 				showDialog(DATE_DIALOG_ID);
 			}

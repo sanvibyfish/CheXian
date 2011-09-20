@@ -24,7 +24,6 @@ public class CheXianActivity extends Activity {
 		btnQuote = (Button) findViewById(R.id.quote_button);
 		btnQuote.setOnClickListener(new OnClickListener() {
 			
-			@Override
 			public void onClick(View v) {
 				ActivityUtils.jump(CheXianActivity.this, ModelQueryActivity.class, ActivityUtils.MODEL_QUERY_ACTIVITY);
 			}
