@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<declare-styleable name="ValidationEditText"><!-- 控件名称-->
+<attr name="regex" format="string"/><!-- 属性名称，类型-->
+<attr name="successed_message" format="string"/>
+<attr name="failed_message" format="string"/>
+</declare-styleable>
+</resources>
