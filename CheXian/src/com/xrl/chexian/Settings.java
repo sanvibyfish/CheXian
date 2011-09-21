@@ -4,7 +4,7 @@ public class Settings {
 	/**
 	 * 是否开启日志
 	 */
-	public static boolean DEBUG = false;
+	public static boolean DEBUG = true;
 	
 	/**
 	 * HTTP调用返回数据格式

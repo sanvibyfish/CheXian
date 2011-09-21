@@ -11,6 +11,7 @@ import org.apache.http.message.BasicNameValuePair;
 import com.xrl.chexian.Settings;
 import com.xrl.chexian.model.Group;
 import com.xrl.chexian.model.ModelQuery;
+import com.xrl.chexian.utils.StringUtils;
 
 import android.util.Log;
 
@@ -63,27 +64,50 @@ public class CheXianHttpApiV1 {
 	// return cities;
 	// }
 
-	public ModelQuery getModelQuery(String licenseNo, String registerDate,
-			String model, String bizQuoteBeginDate, String forceQuoteBeginDate)
+	/**
+	 * 
+	 * @param cityCode
+	 * @param licenseNo
+	 * @param registerDate
+	 * @param model
+	 * @param bizQuoteBeginDate
+	 * @param forceQuoteBeginDate
+	 * @param mobile
+	 * @param email
+	 * @return
+	 * @throws Exception
+	 */
+	public ModelQuery getModelQuery(String cityCode, String licenseNo, String registerDate,
+			String model, String bizQuoteBeginDate, String forceQuoteBeginDate,String mobile,String email)
 			throws Exception {
-		int bizQuoteBeginDateType = 0;
-		if (!"".equals(bizQuoteBeginDate)
-				&& bizQuoteBeginDate.equals(forceQuoteBeginDate)) {
-			bizQuoteBeginDateType = 1;
+		try{
+			int bizQuoteBeginDateType = 0;
+			if (StringUtils.isNotEmpty(bizQuoteBeginDate) && StringUtils.isNotEmpty(forceQuoteBeginDate) && 
+					bizQuoteBeginDate.equals(forceQuoteBeginDate)) {
+				bizQuoteBeginDateType = 1;
+			}
+			HttpGet httpGet = mHttpApi
+					.createHttpGet(fullUrl(URL_API_MODEL_QUERY),new BasicNameValuePair("responseProtocol",Settings.OUTPUT),
+							new BasicNameValuePair("debug", String.valueOf(Settings.DEBUG)),
+							new BasicNameValuePair("vehicle.licenseNo", licenseNo),
+							new BasicNameValuePair("vehicle.registerDate",registerDate),
+							new BasicNameValuePair("vehicle.model", model),
+							new BasicNameValuePair("bizQuote.beginDate",bizQuoteBeginDate), 
+							new BasicNameValuePair("bizQuote.forceQuote", forceQuoteBeginDate),
+							new BasicNameValuePair("bizQuote.useBizBeginDate",String.valueOf(bizQuoteBeginDateType)),
+							new BasicNameValuePair("bizQuote.beginDate",bizQuoteBeginDate),
+							new BasicNameValuePair("insured.mobile",mobile),
+							new BasicNameValuePair("insured.email",email)
+			);
+			
+			
+			ModelQuery modelQuery = (ModelQuery) mHttpApi.doHttpRequest(httpGet,
+					ModelQuery.class);
+			return modelQuery;
+		}catch(Exception ex){
+			ex.printStackTrace();
 		}
-		HttpGet httpGet = mHttpApi
-				.createHttpGet(fullUrl(URL_API_MODEL_QUERY),new BasicNameValuePair("responseProtocol",Settings.OUTPUT),
-						new BasicNameValuePair("debug", String.valueOf(Settings.DEBUG)),
-						new BasicNameValuePair("vehicle.licenseNo", licenseNo),
-						new BasicNameValuePair("vehicle.registerDate",registerDate),
-						new BasicNameValuePair("vehicle.model", model),
-						new BasicNameValuePair("bizQuote.beginDate",bizQuoteBeginDate), 
-						new BasicNameValuePair("bizQuote.forceQuote", forceQuoteBeginDate),
-						new BasicNameValuePair("bizQuote.useBizBeginDate",String.valueOf(bizQuoteBeginDateType)),
-						new BasicNameValuePair("bizQuote.beginDate",bizQuoteBeginDate));
-		ModelQuery modelQuery = (ModelQuery) mHttpApi.doHttpRequest(httpGet,
-				ModelQuery.class);
-		return modelQuery;
+		return null;
 	}
 
 }

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:sanvi="http://schemas.android.com/apk/res/com.xrl.chexian"
 	android:orientation="vertical" android:layout_width="fill_parent"
 	android:background="@drawable/beijing" android:layout_height="fill_parent">
 	<LinearLayout android:background="@drawable/hengtiao" 
@@ -8,14 +9,12 @@
 		android:text="车辆信息" android:textColor="#000000" android:textSize="20dp" android:layout_marginTop="10dp"
 		android:layout_marginLeft="18dp"
 		/>
-		<ImageView android:src="@drawable/jindu"  
-		android:layout_marginLeft="40dp" android:layout_marginTop="5dp"
-		android:layout_height="wrap_content" android:layout_width="wrap_content"/>
 	</LinearLayout>
 	
-	
-	<LinearLayout android:layout_height="fill_parent" android:layout_weight="1" 
-		android:layout_marginLeft="9dp" android:layout_marginTop="10dp"
+	<ScrollView android:layout_marginLeft="9dp" android:layout_marginTop="10dp"
+	android:layout_weight="1" 
+	android:layout_height="fill_parent" android:layout_width="fill_parent">
+	<LinearLayout android:layout_height="fill_parent" 
 		android:layout_width="wrap_content" android:orientation="vertical">
 		
 		<LinearLayout android:layout_height="wrap_content"
@@ -50,7 +49,7 @@
 					android:layout_height="wrap_content" android:text="车牌号" />
 				<EditText android:background="@drawable/model_query_edittext"
 					android:layout_marginLeft="55dp" android:layout_width="wrap_content"
-					android:layout_height="wrap_content" />
+					android:layout_height="wrap_content" android:id="@+id/model_query_license_no"/>
 			</RelativeLayout>
 			<Button android:paddingLeft="20dp"
 			android:layout_width="wrap_content" android:layout_height="wrap_content" 
@@ -83,7 +82,7 @@
 					android:layout_height="wrap_content" android:text="车辆登记年月" />
 				<Button android:background="@drawable/query_model_button"
 				android:id="@+id/model_query_register_date_button"
-					android:layout_marginLeft="90dp" android:layout_width="wrap_content"
+					android:layout_marginLeft="100dp" android:layout_width="wrap_content"
 					android:layout_height="wrap_content" />
 			</RelativeLayout>
 		</LinearLayout>
@@ -104,7 +103,7 @@
 					android:layout_height="wrap_content" android:text="商业保险起期" />
 				<Button android:background="@drawable/query_model_button"
 				android:id="@+id/model_query_business_insurance_button"
-					android:layout_marginLeft="90dp" android:layout_width="wrap_content"
+					android:layout_marginLeft="100dp" android:layout_width="wrap_content"
 					android:layout_height="wrap_content" />
 			</RelativeLayout>
 		</LinearLayout>
@@ -124,7 +123,7 @@
 					android:gravity="center_vertical" android:layout_width="wrap_content"
 					android:layout_height="wrap_content" android:text="交强险保险起期" />
 				<Button android:background="@drawable/query_model_button" android:id="@+id/model_query_insurance_button"
-					android:layout_marginLeft="90dp" android:layout_width="wrap_content"
+					android:layout_marginLeft="105dp" android:layout_width="wrap_content"
 					android:layout_height="wrap_content" />
 			</RelativeLayout>
 		</LinearLayout>
@@ -143,16 +142,76 @@
 				<TextView android:paddingLeft="6dp"
 					android:background="@drawable/query_model_textview"
 					android:gravity="center_vertical" android:layout_width="wrap_content"
-					android:layout_height="wrap_content" android:text="发改委码" />
-				<Button android:background="@drawable/model_query_code_editext"
-					android:layout_marginLeft="90dp" android:layout_width="wrap_content"
+					android:layout_height="wrap_content" android:text="行驶证车辆型号" />
+				<EditText android:background="@drawable/model_query_code_editext"
+				android:id="@+id/model_query_code_edit_text"
+					android:layout_marginLeft="105dp" android:layout_width="wrap_content"
 					android:layout_height="wrap_content" />
 			</RelativeLayout>
 		</LinearLayout>
 		
 	</LinearLayout>
+	
+	<LinearLayout android:background="@drawable/query_model_guanggao"
+		 android:layout_height="wrap_content" android:gravity="center"
+		android:layout_width="wrap_content" >
+			<TextView 	android:layout_gravity="center"
+			android:paddingLeft="40dp"
+			android:text="送100元话费，还能抽4999元旅游大奖"	 android:layout_height="wrap_content"
+		android:layout_width="wrap_content" />
 	</LinearLayout>
 	
+		<LinearLayout android:layout_height="wrap_content"
+		android:layout_width="wrap_content" android:orientation="vertical">
+
+		<LinearLayout android:layout_height="wrap_content"
+			android:background="@drawable/shang" android:layout_width="wrap_content"
+			android:orientation="horizontal">
+			<RelativeLayout android:layout_width="wrap_content"
+				android:layout_marginLeft="10dp" android:layout_marginTop="7dp"
+				android:layout_height="wrap_content">
+				<TextView android:paddingLeft="6dp"
+					android:background="@drawable/query_model_textview"
+					android:gravity="center_vertical" android:layout_width="wrap_content"
+					android:layout_height="wrap_content" android:text="手机号" />
+				<com.xrl.chexian.widget.ValidationEditText android:background="@drawable/model_query_code_editext"
+				sanvi:regex="((13|14|15|18)(\\d)(\\*\\*\\*\\*|\\d{4})(\\d{4,5}))?"
+				sanvi:failed_message = "您输入的手机号码格式不正确"
+				android:id="@+id/model_query_mobile_edit_text" android:autoLink="phone"
+					android:layout_marginLeft="105dp" android:layout_width="wrap_content"
+					android:layout_height="wrap_content" />
+			</RelativeLayout>
+		</LinearLayout>
+		
+		<LinearLayout android:layout_height="wrap_content"
+			android:background="@drawable/xian" android:layout_width="wrap_content">
+		</LinearLayout>
+		
+		
+		<LinearLayout android:layout_height="wrap_content"
+			android:background="@drawable/query_model_bottom" android:layout_width="wrap_content"
+			android:orientation="horizontal">
+			<RelativeLayout android:layout_width="wrap_content"
+				android:layout_marginLeft="10dp" android:layout_marginTop="7dp"
+				android:layout_height="wrap_content">
+				<TextView android:paddingLeft="6dp"
+					android:background="@drawable/query_model_textview"
+					android:gravity="center_vertical" android:layout_width="wrap_content"
+					android:layout_height="wrap_content" android:text="邮箱" />
+				<com.xrl.chexian.widget.ValidationEditText android:background="@drawable/model_query_code_editext"
+				android:paddingLeft="5dp" sanvi:regex="[\\w\\-\\.]+@[a-zA-Z0-9]+(\\-[a-zA-Z0-9]+)?(\\.[a-zA-Z0-9]+(\\-[a-zA-Z0-9]+)?)*\\.[a-zA-Z]{2,4}"
+				sanvi:failed_message = "你输入的邮箱不合法"
+				android:id="@+id/model_query_email_edit_text" android:autoLink="email"
+					android:layout_marginLeft="105dp" android:layout_width="wrap_content"
+					android:layout_height="wrap_content" />
+			</RelativeLayout>
+		</LinearLayout>
+		
+		</LinearLayout>
+		
+	</LinearLayout>
+	
+	</ScrollView>
 	<LinearLayout
 	android:orientation="horizontal"
 	 android:layout_height="wrap_content" android:layout_width="wrap_content" >
@@ -161,6 +220,6 @@
 	 android:layout_height="wrap_content" android:layout_width="wrap_content" />
 	<Button android:background="@drawable/right_button"  android:textSize="24dp" android:paddingLeft="48dp"
 	android:layout_marginLeft="42dp" android:text="下一步" android:textColor="#FFFFFF"
-	android:id="@+id/btnNext"  android:layout_height="wrap_content" android:layout_width="wrap_content" />
+	android:id="@+id/btnNextStep"  android:layout_height="wrap_content" android:layout_width="wrap_content" />
 	</LinearLayout>
 </LinearLayout>

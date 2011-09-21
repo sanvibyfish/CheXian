@@ -72,14 +72,16 @@ public abstract class AbstractHttpApi implements HttpApi {
         String responseString =  StringUtils.convertStreamToString(is);
         JSONObject jsonResponse = new JSONObject(responseString);
         if(DEBUG)Log.d(TAG,"responseString:" + responseString);
-        int  requestCode = jsonResponse.getInt("requestCode");
-        switch (requestCode) {
+        int  resultCode = jsonResponse.getInt("resultCode");
+        switch (resultCode) {
 		case 11:
 			throw new CheXianException("", "你的客户端版本过低");
 		case 12:
 			throw new CheXianException("", "你所选择的机构不存在或未开通网销");
 		case 13:
 			throw new CheXianException("","选择机构不支持此客户端类型");
+		case 561:
+			
 		case 0:
 			ModelQuery mq = GsonUtils.getInstance().json2bean(responseString, clazz);
 			return mq;
