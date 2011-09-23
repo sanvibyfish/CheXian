@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent">
+    	<LinearLayout android:background="@drawable/hengtiao" 
+		android:layout_height="wrap_content" android:layout_width="wrap_content">
+		<TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/title_text_view"
+		android:text="车辆信息" android:textColor="#000000" android:textSize="18dp" android:layout_marginTop="10dp"
+		android:layout_marginLeft="18dp"
+		android:layout_weight="1"
+		/>
+		<ImageView 
+		android:layout_weight="1"
+		android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/model_query_progress"/>
+	</LinearLayout>
+</LinearLayout>

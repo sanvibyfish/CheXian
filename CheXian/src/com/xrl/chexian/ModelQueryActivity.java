@@ -154,7 +154,7 @@ public class ModelQueryActivity extends Activity {
 	};
 	private Button btnBusinessInsurance;
 	private Button btnInsurance;
-	private Button btnBack;
+	private Button btnHome;
 	private Button btnNewCard;
 	private boolean isNewCard;
 	private Button btnNextStep;
@@ -247,12 +247,12 @@ public class ModelQueryActivity extends Activity {
 			}
 		});
 
-		btnBack = (Button) findViewById(R.id.btnBack);
-		btnBack.setOnClickListener(new OnClickListener() {
+		btnHome = (Button) findViewById(R.id.home_button);
+		btnHome.setOnClickListener(new OnClickListener() {
 
 			@Override
 			public void onClick(View v) {
-				ActivityUtils.back(ModelQueryActivity.this, getIntent());
+				ActivityUtils.jump(ModelQueryActivity.this,CheXianActivity.class,ActivityUtils.CHE_XIAN_ACITVITY,getIntent().getExtras(),true);
 			}
 		});
 
@@ -277,7 +277,7 @@ public class ModelQueryActivity extends Activity {
 			}
 		});
 
-		btnNextStep = (Button) findViewById(R.id.btnNextStep);
+		btnNextStep = (Button) findViewById(R.id.right_button);
 		editTextLicenseNo = (ValidationEditText) findViewById(R.id.model_query_license_no);
 		editTextModel = (EditText) findViewById(R.id.model_query_code_edit_text);
 		btnNextStep.setOnClickListener(new OnClickListener() {
