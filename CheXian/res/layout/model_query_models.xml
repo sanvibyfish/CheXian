@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:background="@drawable/beijing" android:layout_height="fill_parent">
+	<LinearLayout android:background="@drawable/hengtiao" 
+		android:layout_height="wrap_content" android:layout_width="wrap_content">
+		<TextView android:layout_height="wrap_content" android:layout_width="wrap_content"
+		android:text="选择车型" android:textColor="#000000" android:textSize="20dp" android:layout_marginTop="10dp"
+		android:layout_marginLeft="18dp"
+		/>
+		<ImageView android:src="@drawable/jindutiao"  
+		android:layout_marginLeft="40dp" android:layout_marginTop="5dp"
+		android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+	</LinearLayout>
+	
+	<ScrollView  android:layout_marginTop="10dp"
+	android:layout_weight="1" 
+	android:layout_height="fill_parent" android:layout_width="fill_parent">
+	<LinearLayout android:layout_height="fill_parent" android:layout_weight="1" 
+		android:layout_marginLeft="9dp" android:layout_marginTop="10dp"
+		android:layout_width="wrap_content" android:orientation="vertical" android:weightSum="1">
+		
+		<LinearLayout android:background="@drawable/query_model_guanggao"
+			 android:layout_height="wrap_content" android:gravity="center"
+			android:layout_width="wrap_content" >
+				<TextView 	android:layout_gravity="center"
+				android:paddingLeft="40dp"
+				android:text="送100元话费，还能抽4999元旅游大奖"	 android:layout_height="wrap_content"
+			android:layout_width="wrap_content" />
+			</LinearLayout>
+			
+		 <LinearLayout 	 
+	     android:gravity="center_horizontal" 
+	     android:layout_height="wrap_content" 
+		 android:layout_weight="1" android:layout_width="305dp">
+		    <TextView android:layout_width="fill_parent" android:gravity="center_horizontal"
+		    android:textSize="20dip"
+			android:layout_height="wrap_content" android:text="请根据行驶证确定一款您的车型"/>
+		</LinearLayout>
+		
+		 <LinearLayout android:layout_height="wrap_content"
+			android:background="@drawable/anniu_shang" android:layout_width="wrap_content"
+			android:orientation="horizontal">
+			<RelativeLayout android:layout_width="wrap_content"
+				android:layout_marginLeft="10dp" android:layout_marginTop="7dp"
+				android:layout_height="wrap_content">
+				<TextView android:paddingLeft="6dp"
+					android:gravity="center_vertical" android:layout_width="wrap_content"
+					android:textColor="#000000"
+					android:layout_height="wrap_content" android:text="奔驰" />
+				
+			</RelativeLayout>
+		</LinearLayout>
+		
+		<LinearLayout android:layout_height="wrap_content"
+			android:background="@drawable/anniu_zhong" android:layout_width="wrap_content"
+			android:orientation="horizontal">
+			<RelativeLayout android:layout_width="wrap_content"
+				android:layout_marginLeft="10dp" android:layout_marginTop="7dp"
+				android:layout_height="wrap_content">
+				<TextView android:paddingLeft="6dp"
+					android:gravity="center_vertical" android:layout_width="wrap_content"
+					android:textColor="#000000"
+					android:layout_height="wrap_content" android:text="奔驰" />
+				
+			</RelativeLayout>
+		</LinearLayout>
+		
+		<LinearLayout android:layout_height="wrap_content"
+			android:background="@drawable/anniu_xia" android:layout_width="wrap_content"
+			android:orientation="horizontal">
+			<RelativeLayout android:layout_width="wrap_content"
+				android:layout_marginLeft="10dp" android:layout_marginTop="7dp"
+				android:layout_height="wrap_content">
+				<TextView android:paddingLeft="6dp"
+					android:gravity="center_vertical" android:layout_width="wrap_content"
+					android:textColor="#000000"
+					android:layout_height="wrap_content" android:text="奔驰" />
+				
+			</RelativeLayout>
+		</LinearLayout>
+		
+		
+	</LinearLayout>
+	
+	</ScrollView>
+	
+	<LinearLayout android:background="@drawable/query_model_guanggao"
+		 android:layout_height="wrap_content" android:gravity="center"
+		 android:layout_marginLeft="9dp"
+		android:layout_width="wrap_content" >
+			<TextView 	android:layout_gravity="center"
+			android:paddingLeft="40dp"
+			android:text="送100元话费，还能抽4999元旅游大奖"	 android:layout_height="wrap_content"
+		android:layout_width="wrap_content" />
+		</LinearLayout>
+	<LinearLayout
+	android:orientation="horizontal"
+	 android:layout_height="wrap_content" android:layout_width="wrap_content" >
+	<Button android:background="@drawable/left_button"  android:textColor="#FFFFFF" android:textSize="24dp"
+	android:text="上一步" android:paddingRight="48dp" 
+	 android:layout_height="wrap_content" android:layout_width="wrap_content" />
+	<Button android:background="@drawable/right_button"  android:textSize="24dp" android:paddingLeft="48dp"
+	android:layout_marginLeft="42dp" android:text="下一步" android:textColor="#FFFFFF"
+	  android:layout_height="wrap_content" android:layout_width="wrap_content" />
+	</LinearLayout>
+</LinearLayout>
