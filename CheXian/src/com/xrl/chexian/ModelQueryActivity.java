@@ -163,6 +163,7 @@ public class ModelQueryActivity extends Activity {
 	private ModelQueryTask modelQueryTask;
 	private EditText editTextMobile;
 	private ValidationEditText editTextEmail;
+	private Button btnBack;
 
 	@Override
 	protected Dialog onCreateDialog(int id) {
@@ -247,14 +248,14 @@ public class ModelQueryActivity extends Activity {
 			}
 		});
 
-		btnHome = (Button) findViewById(R.id.home_button);
-		btnHome.setOnClickListener(new OnClickListener() {
-
-			@Override
-			public void onClick(View v) {
-				ActivityUtils.jump(ModelQueryActivity.this,CheXianActivity.class,ActivityUtils.CHE_XIAN_ACITVITY,getIntent().getExtras(),true);
-			}
-		});
+//		btnHome = (Button) findViewById(R.id.home_button);
+//		btnHome.setOnClickListener(new OnClickListener() {
+//
+//			@Override
+//			public void onClick(View v) {
+//				ActivityUtils.jump(ModelQueryActivity.this,CheXianActivity.class,ActivityUtils.CHE_XIAN_ACITVITY,getIntent().getExtras(),true);
+//			}
+//		});
 
 		btnNewCard = (Button) findViewById(R.id.model_query_new_card_button);
 		btnNewCard.setOnClickListener(new OnClickListener() {
@@ -276,8 +277,11 @@ public class ModelQueryActivity extends Activity {
 				}
 			}
 		});
-
-		btnNextStep = (Button) findViewById(R.id.right_button);
+		
+//		btnBack = (Button) findViewById(R.id.left_button);
+//		btnBack.setVisibility(View.INVISIBLE);
+		
+		btnNextStep = (Button) findViewById(R.id.next_step_button);
 		editTextLicenseNo = (ValidationEditText) findViewById(R.id.model_query_license_no);
 		editTextModel = (EditText) findViewById(R.id.model_query_code_edit_text);
 		btnNextStep.setOnClickListener(new OnClickListener() {

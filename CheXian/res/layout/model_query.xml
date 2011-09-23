@@ -37,7 +37,7 @@
 						android:background="@drawable/query_model_textview"
 						android:gravity="center_vertical" android:layout_width="wrap_content"
 						android:layout_height="wrap_content" android:text="车辆行驶城市" />
-					<Button android:background="@drawable/query_model_button"
+					<Button android:background="@drawable/model_query_city_button"
 						android:id="@+id/query_model_city_button"
 						android:layout_marginLeft="90dp" android:layout_width="wrap_content"
 						android:layout_height="wrap_content" />
@@ -79,6 +79,7 @@
 			</LinearLayout>
 		</LinearLayout>
 
+		<!-- 基本信息2 -->
 			<LinearLayout android:layout_height="wrap_content" android:layout_marginTop="5dp"
 				android:layout_width="wrap_content" android:orientation="vertical">
 
@@ -92,7 +93,7 @@
 							android:background="@drawable/query_model_textview"
 							android:gravity="center_vertical" android:layout_width="wrap_content"
 							android:layout_height="wrap_content" android:text="车辆登记年月" />
-						<Button android:background="@drawable/query_model_button"
+						<Button android:background="@drawable/model_query_button"
 							android:id="@+id/model_query_register_date_button"
 							android:layout_marginLeft="100dp" android:layout_width="wrap_content"
 							android:layout_height="wrap_content" />
@@ -113,7 +114,7 @@
 							android:background="@drawable/query_model_textview"
 							android:gravity="center_vertical" android:layout_width="wrap_content"
 							android:layout_height="wrap_content" android:text="商业保险起期" />
-						<Button android:background="@drawable/query_model_button"
+						<Button android:background="@drawable/model_query_button"
 							android:id="@+id/model_query_business_insurance_button"
 							android:layout_marginLeft="100dp" android:layout_width="wrap_content"
 							android:layout_height="wrap_content" />
@@ -134,7 +135,7 @@
 							android:background="@drawable/query_model_textview"
 							android:gravity="center_vertical" android:layout_width="wrap_content"
 							android:layout_height="wrap_content" android:text="交强险保险起期" />
-						<Button android:background="@drawable/query_model_button"
+						<Button android:background="@drawable/model_query_button"
 							android:id="@+id/model_query_insurance_button"
 							android:layout_marginLeft="105dp" android:layout_width="wrap_content"
 							android:layout_height="wrap_content" />
@@ -166,9 +167,12 @@
 			</LinearLayout>
 
 
-			<LinearLayout android:layout_height="wrap_content"
+		<!-- 联系信息 -->
+		<RelativeLayout  android:layout_height="wrap_content" android:layout_marginTop="10dp"
+				android:layout_width="wrap_content" >
+			<LinearLayout android:layout_height="wrap_content" android:layout_marginTop="26dp"
 				android:layout_width="wrap_content" android:orientation="vertical">
-
+				
 				<LinearLayout android:layout_height="wrap_content"
 					android:background="@drawable/shang" android:layout_width="wrap_content"
 					android:orientation="horizontal">
@@ -216,10 +220,21 @@
 				</LinearLayout>
 
 			</LinearLayout>
-
+			
+			<LinearLayout android:gravity="center"
+				 android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/content_title">
+				 	<TextView 
+				 	android:layout_gravity="center"
+				 	 android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="联系信息" android:textColor="@android:color/white"/>
+				 </LinearLayout>
+		</RelativeLayout>
+		
+			<Button 
+			android:layout_marginTop="10dp" android:textColor="@android:color/white" android:layout_marginBottom="10dp"
+				 android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/next_step_button" 
+			android:text="下一步" android:background="@drawable/next_step_button"/>
 		</LinearLayout>
 
 	</ScrollView>
-	<include layout="@layout/footer" android:layout_width="fill_parent"
-		android:layout_height="wrap_content" />
+
 </LinearLayout>
