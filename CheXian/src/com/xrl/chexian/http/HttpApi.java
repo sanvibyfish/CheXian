@@ -3,6 +3,7 @@ package com.xrl.chexian.http;
 
 import java.io.InputStream;
 import java.lang.reflect.Type;
+import java.util.List;
 
 import org.apache.http.NameValuePair;
 import org.apache.http.client.methods.HttpGet;
@@ -20,6 +21,7 @@ public interface HttpApi {
 	            throws Exception;
 
 	    abstract public HttpGet createHttpGet(String url, NameValuePair... nameValuePairs);
+	    abstract public HttpGet createHttpGet(String url, List<NameValuePair> nameValuePairs);
 
 	    abstract public HttpPost createHttpPost(String url, NameValuePair... nameValuePairs);
 }

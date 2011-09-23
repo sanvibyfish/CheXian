@@ -27,8 +27,8 @@
 					android:background="@drawable/query_model_textview"
 					android:gravity="center_vertical" android:layout_width="wrap_content"
 					android:layout_height="wrap_content" android:text="车辆行驶城市" />
-				<Spinner android:background="@drawable/query_model_button"
-				android:id="@+id/query_model_city_sp"
+				<Button android:background="@drawable/query_model_button"
+				android:id="@+id/query_model_city_button"
 					android:layout_marginLeft="90dp" android:layout_width="wrap_content"
 					android:layout_height="wrap_content" />
 			</RelativeLayout>
@@ -47,7 +47,9 @@
 					android:background="@drawable/query_model_textview"
 					android:gravity="center_vertical" android:layout_width="wrap_content"
 					android:layout_height="wrap_content" android:text="车牌号" />
-				<EditText android:background="@drawable/model_query_edittext"
+				<com.xrl.chexian.widget.ValidationEditText android:background="@drawable/model_query_edittext"
+				sanvi:regex="[\u4e00-\u9fa5]{1}[a-zA-Z]{1}[a-zA-Z_0-9]{4}[a-zA-Z_0-9_\u4e00-\u9fa5]"
+				sanvi:failed_message="请输入正确的车牌号" android:singleLine="true"
 					android:layout_marginLeft="55dp" android:layout_width="wrap_content"
 					android:layout_height="wrap_content" android:id="@+id/model_query_license_no"/>
 			</RelativeLayout>
@@ -144,7 +146,7 @@
 					android:gravity="center_vertical" android:layout_width="wrap_content"
 					android:layout_height="wrap_content" android:text="行驶证车辆型号" />
 				<EditText android:background="@drawable/model_query_code_editext"
-				android:id="@+id/model_query_code_edit_text"
+				android:id="@+id/model_query_code_edit_text" android:singleLine="true"
 					android:layout_marginLeft="105dp" android:layout_width="wrap_content"
 					android:layout_height="wrap_content" />
 			</RelativeLayout>
@@ -176,7 +178,7 @@
 					android:layout_height="wrap_content" android:text="手机号" />
 				<com.xrl.chexian.widget.ValidationEditText android:background="@drawable/model_query_code_editext"
 				sanvi:regex="((13|14|15|18)(\\d)(\\*\\*\\*\\*|\\d{4})(\\d{4,5}))?"
-				sanvi:failed_message = "您输入的手机号码格式不正确"
+				sanvi:failed_message = "您输入的手机号码格式不正确" android:singleLine="true"
 				android:id="@+id/model_query_mobile_edit_text" android:autoLink="phone"
 					android:layout_marginLeft="105dp" android:layout_width="wrap_content"
 					android:layout_height="wrap_content" />
@@ -200,7 +202,7 @@
 					android:layout_height="wrap_content" android:text="邮箱" />
 				<com.xrl.chexian.widget.ValidationEditText android:background="@drawable/model_query_code_editext"
 				android:paddingLeft="5dp" sanvi:regex="[\\w\\-\\.]+@[a-zA-Z0-9]+(\\-[a-zA-Z0-9]+)?(\\.[a-zA-Z0-9]+(\\-[a-zA-Z0-9]+)?)*\\.[a-zA-Z]{2,4}"
-				sanvi:failed_message = "你输入的邮箱不合法"
+				sanvi:failed_message = "你输入的邮箱不合法" android:singleLine="true"
 				android:id="@+id/model_query_email_edit_text" android:autoLink="email"
 					android:layout_marginLeft="105dp" android:layout_width="wrap_content"
 					android:layout_height="wrap_content" />

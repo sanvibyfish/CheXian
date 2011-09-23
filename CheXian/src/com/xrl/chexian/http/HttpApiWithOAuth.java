@@ -1,8 +1,10 @@
 package com.xrl.chexian.http;
 
+import java.util.List;
 import java.util.logging.Logger;
 
 import org.apache.http.NameValuePair;
+import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpRequestBase;
 import org.apache.http.impl.client.DefaultHttpClient;
 
@@ -29,4 +31,5 @@ public class HttpApiWithOAuth extends AbstractHttpApi {
     public String doHttpPost(String url, NameValuePair... nameValuePairs) throws Exception {
         throw new RuntimeException("Haven't written this method yet.");
     }
+
 }

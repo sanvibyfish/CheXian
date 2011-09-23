@@ -26,8 +26,10 @@ public class CheXianHttpApiV1 {
 
 	private static CheXianHttpApiV1 instance = null;
 
-	private static final String URL_API_MODEL_QUERY = "/ebusiness/auto/ris/combo-model-query.do";
+	private static final String BASE_URL = "/ebusiness/auto/ris/";
+	private static final String ULR_ACTION_MODEL_QUERY = "combo-model-query.do";
 
+	private static final String URL_API_MODEL_QUERY = BASE_URL + ULR_ACTION_MODEL_QUERY;
 	// private static final int pageSize = 10;
 
 	public static CheXianHttpApiV1 getInstance() {
@@ -81,10 +83,10 @@ public class CheXianHttpApiV1 {
 			String model, String bizQuoteBeginDate, String forceQuoteBeginDate,String mobile,String email)
 			throws Exception {
 		try{
-			int bizQuoteBeginDateType = 0;
+			String bizQuoteBeginDateType = "";
 			if (StringUtils.isNotEmpty(bizQuoteBeginDate) && StringUtils.isNotEmpty(forceQuoteBeginDate) && 
 					bizQuoteBeginDate.equals(forceQuoteBeginDate)) {
-				bizQuoteBeginDateType = 1;
+				bizQuoteBeginDateType ="1";
 			}
 			HttpGet httpGet = mHttpApi
 					.createHttpGet(fullUrl(URL_API_MODEL_QUERY),new BasicNameValuePair("responseProtocol",Settings.OUTPUT),
@@ -93,16 +95,22 @@ public class CheXianHttpApiV1 {
 							new BasicNameValuePair("vehicle.registerDate",registerDate),
 							new BasicNameValuePair("vehicle.model", model),
 							new BasicNameValuePair("bizQuote.beginDate",bizQuoteBeginDate), 
-							new BasicNameValuePair("bizQuote.forceQuote", forceQuoteBeginDate),
-							new BasicNameValuePair("bizQuote.useBizBeginDate",String.valueOf(bizQuoteBeginDateType)),
-							new BasicNameValuePair("bizQuote.beginDate",bizQuoteBeginDate),
+							new BasicNameValuePair("forceQuote.beginDate", forceQuoteBeginDate),
+							new BasicNameValuePair("forceQuote.useBizBeginDate",bizQuoteBeginDateType),
 							new BasicNameValuePair("insured.mobile",mobile),
-							new BasicNameValuePair("insured.email",email)
+							new BasicNameValuePair("insured.email",email),
+							new BasicNameValuePair("cityCode",cityCode),
+							new BasicNameValuePair("WT.mc_id",Settings.WT_MC_ID),
+							new BasicNameValuePair("partnerName",Settings.PARTNER_NAME),
+							new BasicNameValuePair("name", ULR_ACTION_MODEL_QUERY)
+							
 			);
 			
 			
 			ModelQuery modelQuery = (ModelQuery) mHttpApi.doHttpRequest(httpGet,
 					ModelQuery.class);
+			
+			System.out.println(httpGet.getURI().toString());
 			return modelQuery;
 		}catch(Exception ex){
 			ex.printStackTrace();

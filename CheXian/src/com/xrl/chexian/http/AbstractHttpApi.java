@@ -188,11 +188,19 @@ public abstract class AbstractHttpApi implements HttpApi {
         }
     }
 
-    public HttpGet createHttpGet(String url, NameValuePair... nameValuePairs) {
-        String query = URLEncodedUtils.format(stripNulls(nameValuePairs), HTTP.UTF_8);
+	@Override
+	public HttpGet createHttpGet(String url, List<NameValuePair> nameValuePairs) {
+		String query = URLEncodedUtils.format(nameValuePairs, HTTP.UTF_8);
         HttpGet httpGet = new HttpGet(url + "?" + query);
         httpGet.addHeader(CLIENT_VERSION_HEADER, mClientVersion);
+        httpGet.setHeader("User-Agent", "Mozilla/5.0 (Windows NT 5.1) AppleWebKit/534.30 (KHTML, like Gecko) Chrome/12.0.742.122 Safari/534.30 ChromePlus/1.6.3.0");
+        httpGet.setHeader("Accept","text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8");
+        httpGet.setHeader("Cache-Control","max-age=0");
         return httpGet;
+	}
+	
+    public HttpGet createHttpGet(String url, NameValuePair... nameValuePairs) {
+        return createHttpGet(url, stripNulls(nameValuePairs));
     }
 
     public HttpPost createHttpPost(String url, NameValuePair... nameValuePairs) {
@@ -210,7 +218,7 @@ public abstract class AbstractHttpApi implements HttpApi {
         List<NameValuePair> params = new ArrayList<NameValuePair>();
         for (int i = 0; i < nameValuePairs.length; i++) {
             NameValuePair param = nameValuePairs[i];
-            if (param.getValue() != null) {
+            if (param.getValue() != null && !param.getValue().equals("")) {
                 params.add(param);
             }
         }

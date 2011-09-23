@@ -22,4 +22,10 @@ public class Settings {
 
 	public static String IMAGE_CACHE_DIRECTORY = "CheXian";
 	
+	public static String SIGN = "...";
+	
+	public static String PARTNER_NAME = "Android_XRL";
+	
+	public static String WT_MC_ID = "ec03-163zt-00-00";
+	
 }
