@@ -293,7 +293,7 @@ public class ModelQueryActivity extends Activity {
 				licenseNo = editTextLicenseNo.getText().toString();
 				cityCode = "110100";
 				registerDate = btnRegisterDate.getText().toString();
-				model = editTextModel.getText().toString();
+				model = editTextModel.getText().toString().toUpperCase();
 				bizQuoteBeginDate = btnBusinessInsurance.getText().toString();
 				forceQuoteBeginDate = btnInsurance.getText().toString();
 				mobile = editTextMobile.getText().toString();

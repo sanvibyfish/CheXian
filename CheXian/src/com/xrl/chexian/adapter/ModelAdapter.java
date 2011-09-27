@@ -10,8 +10,10 @@ import android.content.Context;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -65,6 +67,7 @@ public class ModelAdapter extends BaseAdapter {
 	 public TextView textViewExhaustMeasure;
 	 public TextView textViewGearboxName;
 	 public LinearLayout linearLayoutBg;
+	 public boolean isSelected;
 	}
 
 	@Override
@@ -91,9 +94,9 @@ public class ModelAdapter extends BaseAdapter {
 	   }
 	   
 	   if(position == 0){
-		   holder.linearLayoutBg.setBackgroundResource(R.drawable.item_top_button);
+		   holder.linearLayoutBg.setBackgroundResource(R.drawable.item_top_button_normal);
 	   }else if(position == getCount()-1){
-		   holder.linearLayoutBg.setBackgroundResource(R.drawable.item_bottom_button);
+		   holder.linearLayoutBg.setBackgroundResource(R.drawable.item_bottom_button_normal);
 	   }
 	   
 	   if(DEBUG)Log.d(TAG, "this position is :" + position);

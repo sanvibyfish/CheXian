@@ -52,7 +52,7 @@ public abstract class AbstractHttpApi implements HttpApi {
 	
     private static final String DEFAULT_CLIENT_VERSION = "com.fg114.maimaijia";
     private static final String CLIENT_VERSION_HEADER = "User-Agent";
-    private static final int TIMEOUT = 10;
+    private static final int TIMEOUT = 60;
     
     private final DefaultHttpClient mHttpClient;
     private final String mClientVersion;    
@@ -84,6 +84,7 @@ public abstract class AbstractHttpApi implements HttpApi {
 			
 		case 0:
 			ModelQuery mq = GsonUtils.getInstance().json2bean(responseString, clazz);
+			System.gc();
 			return mq;
 		default:
 			

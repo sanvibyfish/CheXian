@@ -232,7 +232,7 @@
 			<Button 
 			android:layout_marginTop="10dp" android:textColor="@android:color/white" android:layout_marginBottom="10dp"
 				 android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/next_step_button" 
-			android:text="下一步" android:background="@drawable/next_step_button"/>
+			android:text="下一步" android:background="@drawable/step_button"/>
 		</LinearLayout>
 
 	</ScrollView>

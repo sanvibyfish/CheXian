@@ -1,16 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
   xmlns:android="http://schemas.android.com/apk/res/android"
-  android:orientation="horizontal"
+  android:orientation="vertical"
   android:layout_width="fill_parent"
   android:layout_height="fill_parent">
-  <Button android:paddingRight="60dp" android:layout_weight="1" android:id="@+id/left_button"
-  android:background="@drawable/left_button" android:textColor="@android:color/white" android:textSize="20dp"
-  android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="上一步"/>
-    <Button android:layout_weight="1"
-  android:background="@drawable/home_button"  android:id="@+id/home_button"
-  android:layout_width="wrap_content" android:layout_height="wrap_content" />
-  <Button android:paddingLeft="60dp" android:layout_weight="1" android:id="@+id/right_button"
-  android:background="@drawable/right_button" android:textColor="@android:color/white" android:textSize="20dp"
-  android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="下一步"/>
+		<Button android:layout_marginLeft="9dp" android:id="@+id/footer_back_button" android:textColor="@android:color/white"
+		android:text="上一步" android:background="@drawable/step_button" android:layout_marginTop="5dp"
+		 android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+		<Button android:layout_marginLeft="9dp" android:id="@+id/footer_next_button" android:textColor="@android:color/white"
+		android:text="下一步" android:background="@drawable/step_button" android:layout_marginTop="5dp"
+		 android:layout_height="wrap_content" android:layout_width="wrap_content"/>
 </LinearLayout>

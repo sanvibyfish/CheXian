@@ -27,16 +27,13 @@
 			android:layout_height="wrap_content" android:text="请根据行驶证确定一款您的车型"/>
 		</LinearLayout>
 		
-		<ListView  android:layout_weight="1" android:cacheColorHint="#00000000" android:listSelector="@android:color/transparent"
+		<ListView
+		 android:choiceMode="singleChoice" android:divider="#00FFCC00"
+		  android:layout_weight="1" android:cacheColorHint="#00000000" android:listSelector="@android:color/transparent"
 		android:id="@+id/model_query_models_list_view" 
 		android:layout_width="fill_parent" android:layout_height="fill_parent"  />
-				<Button android:layout_marginLeft="9dp"
-		android:text="上一步" android:background="@drawable/next_step_button" android:layout_marginTop="5dp"
-		 android:layout_height="wrap_content" android:layout_width="wrap_content"/>
-		<Button android:layout_marginLeft="9dp"
-		android:text="下一步" android:background="@drawable/next_step_button" android:layout_marginTop="5dp"
-		 android:layout_height="wrap_content" android:layout_width="wrap_content"/>
 		
+		<include layout="@layout/footer" android:layout_width="fill_parent" android:layout_height="wrap_content"/>		
 	</LinearLayout>
 	
 </LinearLayout>

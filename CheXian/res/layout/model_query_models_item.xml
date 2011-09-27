@@ -3,9 +3,12 @@
 	android:orientation="vertical" android:layout_width="fill_parent"
 	android:layout_height="fill_parent">
 	<LinearLayout android:layout_height="wrap_content" android:id="@+id/models_item_bg"
-		android:layout_gravity="center" android:background="@drawable/item_center_button"
-		android:layout_width="wrap_content" android:orientation="vertical">
-		<LinearLayout android:layout_width="wrap_content"
+	android:layout_marginLeft="10dp" android:layout_marginRight="10dp"
+		android:layout_gravity="center" android:background="@drawable/item_center_button_normal"
+		android:layout_width="wrap_content" android:orientation="horizontal">
+		<RelativeLayout android:layout_width="fill_parent"
+		 android:layout_height="fill_parent" >
+		<LinearLayout  android:layout_width="wrap_content" 
 			android:orientation="vertical" android:layout_marginLeft="10dp"
 			android:layout_marginTop="7dp" android:layout_height="wrap_content">
 			<LinearLayout android:layout_width="wrap_content"
@@ -44,5 +47,11 @@
 					android:layout_height="wrap_content" android:text="自动" />
 			</LinearLayout>
 		</LinearLayout>
+		<RadioButton 
+		 android:layout_centerVertical="true" android:layout_alignParentRight="true"
+		android:layout_height="wrap_content" android:layout_width="wrap_content" 
+			style="@style/RadioButton"
+		 />
+		</RelativeLayout>
 	</LinearLayout>
 </LinearLayout>
