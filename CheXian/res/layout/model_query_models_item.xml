@@ -47,10 +47,11 @@
 					android:layout_height="wrap_content" android:text="自动" />
 			</LinearLayout>
 		</LinearLayout>
-		<RadioButton 
+		<Button
+		android:layout_marginRight="10dp"
+		 android:id="@+id/models_item_button" android:background="@drawable/radio_normal"
 		 android:layout_centerVertical="true" android:layout_alignParentRight="true"
 		android:layout_height="wrap_content" android:layout_width="wrap_content" 
-			style="@style/RadioButton"
 		 />
 		</RelativeLayout>
 	</LinearLayout>

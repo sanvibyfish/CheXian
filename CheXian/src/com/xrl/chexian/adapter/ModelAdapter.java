@@ -2,11 +2,10 @@ package com.xrl.chexian.adapter;
 
 import java.util.List;
 
-import com.xrl.chexian.R;
-import com.xrl.chexian.Settings;
-import com.xrl.chexian.model.Model;
-
 import android.content.Context;
+import android.os.Handler;
+import android.os.Looper;
+import android.os.Message;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,9 +13,15 @@ import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.Button;
-import android.widget.ImageView;
+import android.widget.CompoundButton;
+import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.LinearLayout;
+import android.widget.RadioButton;
 import android.widget.TextView;
+
+import com.xrl.chexian.R;
+import com.xrl.chexian.Settings;
+import com.xrl.chexian.model.Model;
 
 
 /**
@@ -27,7 +32,8 @@ public class ModelAdapter extends BaseAdapter {
 
 
 	private Context context;
-
+	 ViewHolder holder = null;
+	 Integer positionSelected;
 	public ModelAdapter(Context c ,List<Model> models) {
 	   this.context = c;
 	   this.models = models;
@@ -67,13 +73,12 @@ public class ModelAdapter extends BaseAdapter {
 	 public TextView textViewExhaustMeasure;
 	 public TextView textViewGearboxName;
 	 public LinearLayout linearLayoutBg;
-	 public boolean isSelected;
+	 public Button button;
 	}
-
 	@Override
 	public View getView(final int position, View convertView, ViewGroup parent) {
 	   // TODO Auto-generated method stub
-	   ViewHolder holder = null;
+	  
 	  
 	   if (convertView == null) {
 	    holder = new ViewHolder();
@@ -89,6 +94,7 @@ public class ModelAdapter extends BaseAdapter {
 	    holder.textViewGearboxName = (TextView) convertView
 		  	      .findViewById(R.id.models_item_gearbox_name);
 	    holder.linearLayoutBg = (LinearLayout) convertView.findViewById(R.id.models_item_bg);
+	    holder.button =  (Button) convertView.findViewById(R.id.models_item_button);
 	   } else {
 		   holder = (ViewHolder) convertView.getTag();
 	   }
@@ -106,7 +112,20 @@ public class ModelAdapter extends BaseAdapter {
 	   holder.textViewPirce.setText(model.price);
 	   holder.textViewExhaustMeasure.setText(model.exhaustMeasure);
 	   holder.textViewGearboxName.setText(model.gearboxName);
-	   
+	   if(positionSelected != null && positionSelected == position){
+		   holder.button.setBackgroundResource(R.drawable.radio_selected);
+	   }else{
+		   holder.button.setBackgroundResource(R.drawable.radio_normal);
+	   }
+	   holder.button.setOnClickListener(new OnClickListener() {
+		
+		@Override
+		public void onClick(View v) {
+			positionSelected = position;
+			notifyDataSetChanged();
+			if(DEBUG)Log.d(TAG,"the position:" + position + " is selected");			
+		}
+	});
 	   convertView.setTag(holder);
 	   return convertView;
 	}

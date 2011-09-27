@@ -28,7 +28,7 @@
 		</LinearLayout>
 		
 		<ListView
-		 android:choiceMode="singleChoice" android:divider="#00FFCC00"
+		android:divider="#00FFCC00"
 		  android:layout_weight="1" android:cacheColorHint="#00000000" android:listSelector="@android:color/transparent"
 		android:id="@+id/model_query_models_list_view" 
 		android:layout_width="fill_parent" android:layout_height="fill_parent"  />
