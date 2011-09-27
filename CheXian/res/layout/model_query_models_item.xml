@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+	<LinearLayout android:layout_height="wrap_content" android:id="@+id/models_item_bg"
+		android:layout_gravity="center" android:background="@drawable/item_center_button"
+		android:layout_width="wrap_content" android:orientation="vertical">
+		<LinearLayout android:layout_width="wrap_content"
+			android:orientation="vertical" android:layout_marginLeft="10dp"
+			android:layout_marginTop="7dp" android:layout_height="wrap_content">
+			<LinearLayout android:layout_width="wrap_content"
+				android:orientation="horizontal" android:layout_height="wrap_content">
+				<TextView android:paddingLeft="6dp" android:textColor="@android:color/black"
+					android:id="@+id/models_item_family_name_text_view" android:layout_width="wrap_content"
+					android:layout_height="wrap_content" android:text="奔驰" />
+				<TextView android:layout_width="wrap_content" android:textColor="@android:color/black"
+					android:layout_height="wrap_content" android:text="—"/>
+				<TextView  android:textColor="@android:color/black"
+					android:id="@+id/models_item_brand_name_text_view" android:layout_width="wrap_content"
+					android:layout_height="wrap_content" android:text="奔驰" />
+			</LinearLayout>
+			<LinearLayout android:layout_width="wrap_content"
+				android:orientation="horizontal" android:layout_height="wrap_content">
+				<TextView android:paddingLeft="6dp" android:layout_width="wrap_content" android:textColor="@android:color/black"
+					android:layout_height="wrap_content" android:text="报价:" />
+				<TextView
+				android:textColor="@android:color/black"
+				 android:layout_width="wrap_content" android:id="@+id/models_item_price_text_view"
+					android:layout_height="wrap_content" android:text="156.5" />
+				<TextView
+				android:textColor="@android:color/black"
+				 android:layout_width="wrap_content"
+					android:layout_height="wrap_content" android:text="万" />
+				<TextView android:layout_width="wrap_content" android:textColor="@android:color/black"
+					android:layout_height="wrap_content" android:text=" 排量:" />
+				<TextView android:textColor="@android:color/black"
+				 android:layout_width="wrap_content" android:id="@+id/models_item_exhaust_measure"
+					android:layout_height="wrap_content" android:text="5.5" />
+				<TextView android:textColor="@android:color/black"
+				android:layout_width="wrap_content"
+					android:layout_height="wrap_content" android:text="变速箱:" />
+				<TextView android:textColor="@android:color/black"
+				android:layout_width="wrap_content" android:id="@+id/models_item_gearbox_name"
+					android:layout_height="wrap_content" android:text="自动" />
+			</LinearLayout>
+		</LinearLayout>
+	</LinearLayout>
+</LinearLayout>

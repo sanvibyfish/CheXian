@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="fill_parent" android:background="@drawable/beijing"
+	android:layout_height="fill_parent">
+	<include layout="@layout/header" android:layout_width="wrap_content"
+		android:layout_height="wrap_content" />
+
+	<LinearLayout android:orientation="horizontal" android:gravity="center_horizontal"
+	android:layout_marginTop="8dp"
+		android:layout_width="fill_parent" android:layout_height="wrap_content">
+		<RelativeLayout android:layout_width="wrap_content" 
+			android:layout_height="wrap_content">
+			<Button android:layout_width="wrap_content" android:text="性价比高"
+				android:paddingBottom="10dp" android:textSize="18dp"
+				android:layout_height="wrap_content" android:background="@drawable/combo_quote_tab_normal" />
+
+			<LinearLayout android:layout_centerVertical="true"
+				android:layout_centerHorizontal="true" android:paddingTop="20dp"
+				android:paddingRight="10dp" android:layout_width="wrap_content"
+				android:orientation="horizontal" android:layout_height="wrap_content">
+				<TextView android:layout_width="wrap_content"
+					android:textSize="10dp"
+					android:layout_height="wrap_content" android:text="￥"
+					android:textColor="@android:color/white"></TextView>
+				<TextView android:layout_width="wrap_content" android:text="5490.14"
+					android:textSize="10dp"
+					android:textColor="@android:color/white" android:layout_height="wrap_content" />
+			</LinearLayout>
+
+			<LinearLayout android:layout_centerVertical="true"
+				android:layout_centerHorizontal="true" android:paddingTop="40dp"
+				android:paddingRight="14dp" android:layout_width="wrap_content"
+				android:layout_height="wrap_content">
+				<TextView android:layout_width="wrap_content"
+					android:textColor="@android:color/white" android:textSize="10dp"
+					android:layout_height="wrap_content" android:text="市场价 ￥" />
+				<TextView android:layout_width="wrap_content"
+					android:textSize="10dp" android:textColor="@android:color/white"
+					android:layout_height="wrap_content" android:text="6532.45" />
+			</LinearLayout>
+		</RelativeLayout>
+
+		<RelativeLayout android:layout_width="wrap_content" 
+			android:layout_height="wrap_content">
+			<Button android:layout_width="wrap_content" android:text="基本保障" 
+				android:paddingBottom="10dp" android:textSize="18dp"
+				android:layout_height="wrap_content" android:background="@drawable/combo_quote_tab_normal" />
+
+			<LinearLayout android:layout_centerVertical="true"
+				android:layout_centerHorizontal="true" android:paddingTop="20dp"
+				android:paddingRight="10dp" android:layout_width="wrap_content"
+				android:orientation="horizontal" android:layout_height="wrap_content">
+				<TextView android:layout_width="wrap_content"
+					android:textSize="10dp"
+					android:layout_height="wrap_content" android:text="￥"
+					android:textColor="@android:color/white"></TextView>
+				<TextView android:layout_width="wrap_content" android:text="2005.1"
+					android:textSize="10dp"
+					android:textColor="@android:color/white" android:layout_height="wrap_content" />
+			</LinearLayout>
+
+			<LinearLayout android:layout_centerVertical="true"
+				android:layout_centerHorizontal="true" android:paddingTop="40dp"
+				android:paddingRight="14dp" android:layout_width="wrap_content"
+				android:layout_height="wrap_content">
+				<TextView android:layout_width="wrap_content"
+					android:textColor="@android:color/white" android:textSize="10dp"
+					android:layout_height="wrap_content" android:text="市场价 ￥" />
+				<TextView android:layout_width="wrap_content"
+					android:textSize="10dp" android:textColor="@android:color/white"
+					android:layout_height="wrap_content" android:text="3620.4" />
+			</LinearLayout>
+		</RelativeLayout>
+	<RelativeLayout android:layout_width="wrap_content"
+			android:layout_height="wrap_content">
+			<Button android:layout_width="wrap_content" android:text="自由定制"
+				android:paddingBottom="10dp" android:textSize="18dp"
+				android:layout_height="wrap_content" android:background="@drawable/combo_quote_tab_normal" />
+
+			<LinearLayout android:layout_centerVertical="true"
+				android:layout_centerHorizontal="true" android:paddingTop="20dp"
+				android:paddingRight="10dp" android:layout_width="wrap_content"
+				android:orientation="horizontal" android:layout_height="wrap_content">
+				<TextView android:layout_width="wrap_content"
+					android:textSize="10dp"
+					android:layout_height="wrap_content" android:text="￥"
+					android:textColor="@android:color/white"></TextView>
+				<TextView android:layout_width="wrap_content" android:text="你来决定"
+					android:textSize="10dp"
+					android:textColor="@android:color/white" android:layout_height="wrap_content" />
+			</LinearLayout>
+
+		</RelativeLayout>
+
+	</LinearLayout>
+</LinearLayout>

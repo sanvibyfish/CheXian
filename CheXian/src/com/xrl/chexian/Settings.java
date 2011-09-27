@@ -14,7 +14,7 @@ public class Settings {
 	/**
 	 * domain
 	 */
-	public static String DOMAIN = "p1.pa18.com";
+	public static String DOMAIN = "stg.pa18.com";
 	
 	public static int PORT = 80;
 	

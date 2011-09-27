@@ -92,7 +92,7 @@ public class CheXianHttpApiV1 {
 					.createHttpGet(fullUrl(URL_API_MODEL_QUERY),new BasicNameValuePair("responseProtocol",Settings.OUTPUT),
 							new BasicNameValuePair("debug", String.valueOf(Settings.DEBUG)),
 							new BasicNameValuePair("vehicle.licenseNo", licenseNo),
-							new BasicNameValuePair("vehicle.registerDate",registerDate),
+							new BasicNameValuePair("vehicle.registerDate",registerDate + "-01"),
 							new BasicNameValuePair("vehicle.model", model),
 							new BasicNameValuePair("bizQuote.beginDate",bizQuoteBeginDate), 
 							new BasicNameValuePair("forceQuote.beginDate", forceQuoteBeginDate),

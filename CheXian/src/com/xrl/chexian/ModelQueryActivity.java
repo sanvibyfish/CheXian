@@ -38,6 +38,8 @@ import com.xrl.chexian.widget.ValidationEditText;
 public class ModelQueryActivity extends Activity {
 	private static final String TAG = "ModelQueryActivity";
 	private static final boolean DEBUG = Settings.DEBUG;
+	public static final String MODEL_QUERY = "modelQuery";
+	
 	List<City> cities;
 	private Button btnQueryModelCity;
 	private ListAdapter  cityAdapter;
@@ -296,7 +298,7 @@ public class ModelQueryActivity extends Activity {
 				forceQuoteBeginDate = btnInsurance.getText().toString();
 				mobile = editTextMobile.getText().toString();
 				email = editTextEmail.getText().toString();
-				modelQueryTask = new ModelQueryTask("",
+				modelQueryTask = new ModelQueryTask("请稍候...",
 						ModelQueryActivity.this, cityCode, licenseNo,
 						registerDate, model, bizQuoteBeginDate,
 						forceQuoteBeginDate,mobile,email);
@@ -304,7 +306,10 @@ public class ModelQueryActivity extends Activity {
 					@Override
 					public void run() {
 						ModelQuery modelQuery = (ModelQuery) modelQueryTask.getResult();
-						Toast.makeText(ModelQueryActivity.this, "ddd", Toast.LENGTH_SHORT).show();
+						Bundle bundle = new Bundle();
+						bundle.putSerializable(MODEL_QUERY, modelQuery);
+						ActivityUtils.jump(ModelQueryActivity.this, ModelQueryModelsActivity.class, ActivityUtils.MODEL_QUERY_MODELS_ACTIVITY,bundle);
+						
 					}
 				});
 

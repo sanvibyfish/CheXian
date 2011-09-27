@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent">
+  <!-- title -->
+    <LinearLayout
+    android:gravity="center" android:layout_gravity="center"
+     android:layout_width="wrap_content" android:layout_height="wrap_content" 
+    android:background="@drawable/combo_quote_item_bg">
+    	<TextView android:layout_width="wrap_content" android:textColor="@android:color/white"
+    		android:layout_weight="2" android:gravity="center"
+    	android:layout_height="wrap_content"  android:text="险种"/>
+    	<TextView   android:textColor="@android:color/white"
+    	android:layout_weight="1" android:gravity="center"
+    	android:layout_width="wrap_content" android:layout_height="wrap_content"  android:text="保额"/>
+    	<TextView  android:textColor="@android:color/white"
+    	android:layout_weight="1" android:gravity="center"
+    	 android:layout_width="wrap_content" android:layout_height="wrap_content"  android:text="保费"/>
+    </LinearLayout>
+    <ImageView android:src="@drawable/combo_quote_item_line" 
+    android:layout_gravity="center"
+    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    
+    <!-- 车辆损失险 -->
+        <LinearLayout
+    android:gravity="center" android:layout_gravity="center"
+     android:layout_width="wrap_content" android:layout_height="wrap_content" 
+    android:background="@drawable/combo_quote_item_bg">
+    	<TextView android:layout_width="wrap_content" android:textColor="@android:color/white"
+    		android:layout_weight="2" android:gravity="center"
+    	android:layout_height="wrap_content"  android:text="险种"/>
+    	<TextView   android:textColor="@android:color/white"
+    	android:layout_weight="1" android:gravity="center"
+    	android:layout_width="wrap_content" android:layout_height="wrap_content"  android:text="保额"/>
+    	<TextView  android:textColor="@android:color/white"
+    	android:layout_weight="1" android:gravity="center"
+    	 android:layout_width="wrap_content" android:layout_height="wrap_content"  android:text="保费"/>
+    </LinearLayout>
+        <ImageView android:src="@drawable/combo_quote_item_line" 
+    android:layout_gravity="center"
+    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    
+        <!-- 商业第三者责任险 -->
+        <LinearLayout
+    android:gravity="center" android:layout_gravity="center"
+     android:layout_width="wrap_content" android:layout_height="wrap_content" 
+    android:background="@drawable/combo_quote_item_bg">
+    	<TextView android:layout_width="wrap_content" android:textColor="@android:color/white"
+    		android:layout_weight="2" android:gravity="center"
+    	android:layout_height="wrap_content"  android:text="险种"/>
+    	<TextView   android:textColor="@android:color/white"
+    	android:layout_weight="1" android:gravity="center"
+    	android:layout_width="wrap_content" android:layout_height="wrap_content"  android:text="保额"/>
+    	<TextView  android:textColor="@android:color/white"
+    	android:layout_weight="1" android:gravity="center"
+    	 android:layout_width="wrap_content" android:layout_height="wrap_content"  android:text="保费"/>
+    </LinearLayout>
+        <ImageView android:src="@drawable/combo_quote_item_line" 
+    android:layout_gravity="center"
+    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    
+            <!-- 全车盗抢险 -->
+        <LinearLayout
+    android:gravity="center" android:layout_gravity="center"
+     android:layout_width="wrap_content" android:layout_height="wrap_content" 
+    android:background="@drawable/combo_quote_item_bg">
+    	<TextView android:layout_width="wrap_content" android:textColor="@android:color/white"
+    		android:layout_weight="2" android:gravity="center"
+    	android:layout_height="wrap_content"  android:text="险种"/>
+    	<TextView   android:textColor="@android:color/white"
+    	android:layout_weight="1" android:gravity="center"
+    	android:layout_width="wrap_content" android:layout_height="wrap_content"  android:text="保额"/>
+    	<TextView  android:textColor="@android:color/white"
+    	android:layout_weight="1" android:gravity="center"
+    	 android:layout_width="wrap_content" android:layout_height="wrap_content"  android:text="保费"/>
+    </LinearLayout>
+        <ImageView android:src="@drawable/combo_quote_item_line" 
+    android:layout_gravity="center"
+    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    
+        
+            <!-- 司机座位责任险 -->
+        <LinearLayout
+    android:gravity="center" android:layout_gravity="center"
+     android:layout_width="wrap_content" android:layout_height="wrap_content" 
+    android:background="@drawable/combo_quote_item_bg">
+    	<TextView android:layout_width="wrap_content" android:textColor="@android:color/white"
+    		android:layout_weight="2" android:gravity="center"
+    	android:layout_height="wrap_content"  android:text="险种"/>
+    	<TextView   android:textColor="@android:color/white"
+    	android:layout_weight="1" android:gravity="center"
+    	android:layout_width="wrap_content" android:layout_height="wrap_content"  android:text="保额"/>
+    	<TextView  android:textColor="@android:color/white"
+    	android:layout_weight="1" android:gravity="center"
+    	 android:layout_width="wrap_content" android:layout_height="wrap_content"  android:text="保费"/>
+    </LinearLayout>
+        <ImageView android:src="@drawable/combo_quote_item_line" 
+    android:layout_gravity="center"
+    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    
+                <!-- 乘客座位责任险 -->
+        <LinearLayout
+    android:gravity="center" android:layout_gravity="center"
+     android:layout_width="wrap_content" android:layout_height="wrap_content" 
+    android:background="@drawable/combo_quote_item_bg">
+    	<TextView android:layout_width="wrap_content" android:textColor="@android:color/white"
+    		android:layout_weight="2" android:gravity="center"
+    	android:layout_height="wrap_content"  android:text="险种"/>
+    	<TextView   android:textColor="@android:color/white"
+    	android:layout_weight="1" android:gravity="center"
+    	android:layout_width="wrap_content" android:layout_height="wrap_content"  android:text="保额"/>
+    	<TextView  android:textColor="@android:color/white"
+    	android:layout_weight="1" android:gravity="center"
+    	 android:layout_width="wrap_content" android:layout_height="wrap_content"  android:text="保费"/>
+    </LinearLayout>
+        <ImageView android:src="@drawable/combo_quote_item_line" 
+    android:layout_gravity="center"
+    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    
+               <!-- 玻璃单独破碎险 -->
+        <LinearLayout
+    android:gravity="center" android:layout_gravity="center"
+     android:layout_width="wrap_content" android:layout_height="wrap_content" 
+    android:background="@drawable/combo_quote_item_bg">
+    	<TextView android:layout_width="wrap_content" android:textColor="@android:color/white"
+    		android:layout_weight="2" android:gravity="center"
+    	android:layout_height="wrap_content"  android:text="险种"/>
+    	<TextView   android:textColor="@android:color/white"
+    	android:layout_weight="1" android:gravity="center"
+    	android:layout_width="wrap_content" android:layout_height="wrap_content"  android:text="保额"/>
+    	<TextView  android:textColor="@android:color/white"
+    	android:layout_weight="1" android:gravity="center"
+    	 android:layout_width="wrap_content" android:layout_height="wrap_content"  android:text="保费"/>
+    </LinearLayout>
+        <ImageView android:src="@drawable/combo_quote_item_line" 
+    android:layout_gravity="center"
+    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    
+                  <!-- 自然损失险 -->
+        <LinearLayout
+    android:gravity="center" android:layout_gravity="center"
+     android:layout_width="wrap_content" android:layout_height="wrap_content" 
+    android:background="@drawable/combo_quote_item_bg">
+    	<TextView android:layout_width="wrap_content" android:textColor="@android:color/white"
+    		android:layout_weight="2" android:gravity="center"
+    	android:layout_height="wrap_content"  android:text="险种"/>
+    	<TextView   android:textColor="@android:color/white"
+    	android:layout_weight="1" android:gravity="center"
+    	android:layout_width="wrap_content" android:layout_height="wrap_content"  android:text="保额"/>
+    	<TextView  android:textColor="@android:color/white"
+    	android:layout_weight="1" android:gravity="center"
+    	 android:layout_width="wrap_content" android:layout_height="wrap_content"  android:text="保费"/>
+    </LinearLayout>
+        <ImageView android:src="@drawable/combo_quote_item_line" 
+    android:layout_gravity="center"
+    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+</LinearLayout>
