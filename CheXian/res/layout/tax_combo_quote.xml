@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:background="@drawable/beijing"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent">
+    <include layout="@layout/header" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    
+   		<LinearLayout android:layout_height="fill_parent"
+			android:layout_width="wrap_content" android:orientation="vertical">
+			<!-- 温馨提示 -->
+			<LinearLayout android:background="@drawable/query_model_guanggao"
+				android:layout_height="wrap_content" android:gravity="center"
+				android:layout_width="wrap_content">
+				<TextView android:layout_gravity="center" android:textColor="@android:color/white"
+					android:paddingLeft="50dp" android:textSize="8dp"
+					android:text="交强险和车船税按国家规定为行业统一价，各家保险公司价格一致。同时投保可享受更方便的理赔服务。" android:layout_height="wrap_content"
+					android:layout_width="wrap_content" />
+			</LinearLayout>
+
+
+			<!-- 交强险 -->
+			<LinearLayout android:orientation="vertical" android:layout_marginTop="10dp"
+				android:layout_height="wrap_content" android:layout_width="wrap_content">
+
+				<!-- 交强险和车船险 -->
+				<RelativeLayout android:layout_width="wrap_content"  android:layout_marginLeft="10dp"
+					android:layout_height="wrap_content">
+					<LinearLayout android:layout_height="wrap_content"
+						android:layout_marginTop="25dp" android:background="@drawable/shang"
+						android:layout_width="wrap_content" android:orientation="horizontal">
+						<RelativeLayout android:layout_width="wrap_content"
+							android:layout_marginLeft="10dp" android:layout_marginTop="10dp"
+							android:layout_height="wrap_content">
+							<TextView android:paddingLeft="6dp" android:textColor="@android:color/white"
+								android:background="@drawable/query_model_textview"
+								android:gravity="center_vertical" android:layout_width="wrap_content"
+								android:layout_height="wrap_content" android:text="交强险和车船险" />
+							<Spinner android:background="@drawable/shuru" android:id="@+id/query_model_city_sp"
+								android:layout_marginLeft="90dp" android:layout_width="wrap_content"
+								android:layout_height="wrap_content" />
+						</RelativeLayout>
+					</LinearLayout>
+					<LinearLayout android:background="@drawable/content_title"
+						android:layout_height="wrap_content" android:gravity="center"
+						android:layout_width="wrap_content">
+						<TextView android:layout_height="wrap_content" android:textColor="@android:color/white"
+							android:layout_width="wrap_content" android:text="交强险"
+							 android:textSize="12dp" />
+					</LinearLayout>
+
+				</RelativeLayout>
+			</LinearLayout>
+
+			<!-- 保费合计 -->
+			<LinearLayout android:orientation="vertical" android:layout_marginTop="10dp"
+				android:layout_height="wrap_content" android:layout_width="wrap_content">
+
+				<!-- 交强险和车船险 -->
+				<RelativeLayout android:layout_width="wrap_content"  android:layout_marginLeft="10dp"
+					android:layout_height="wrap_content">
+					<LinearLayout android:layout_height="wrap_content" android:gravity="center_vertical"
+						android:layout_marginTop="25dp" android:background="@drawable/shang"
+						android:layout_width="wrap_content" android:orientation="horizontal">
+						<TextView android:gravity="center_horizontal"
+						android:textColor="@android:color/white" android:layout_weight="1"
+						android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="商业险"/>
+						<TextView android:gravity="center_horizontal"
+						android:textColor="@android:color/white" android:layout_weight="1"
+						 android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="交强险"/>
+						<TextView android:gravity="center_horizontal"
+						android:textColor="@android:color/white" android:layout_weight="1"
+						 android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="车船险"/>
+						<TextView android:gravity="center_horizontal"
+						android:textColor="@android:color/white" android:layout_weight="1"
+						 android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="商业险"/>
+					</LinearLayout>
+					<LinearLayout android:background="@drawable/content_title"
+						android:layout_height="wrap_content" android:gravity="center"
+						android:layout_width="wrap_content">
+						<TextView android:layout_height="wrap_content" android:textColor="@android:color/white"
+							android:layout_width="wrap_content" android:text="保费合计"
+							 android:textSize="12dp" />
+					</LinearLayout>
+
+				</RelativeLayout>
+				
+				<LinearLayout android:layout_height="wrap_content" android:gravity="center_vertical"
+						android:background="@drawable/query_model_middle" android:layout_marginLeft="10dp"
+						android:layout_width="wrap_content" android:orientation="horizontal">
+						<TextView android:gravity="center_horizontal"
+						android:textColor="@android:color/white" android:layout_weight="1"
+						android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="2634.40"/>
+						<TextView android:gravity="center_horizontal"
+						android:textColor="@android:color/white" android:layout_weight="1"
+						 android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="+"/>
+						<TextView android:gravity="center_horizontal"
+						android:textColor="@android:color/white" android:layout_weight="1"
+						 android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0.00"/>
+						<TextView android:gravity="center_horizontal"
+						android:textColor="@android:color/white" android:layout_weight="1"
+						 android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="+"/>
+						<TextView android:gravity="center_horizontal"
+						android:textColor="@android:color/white" android:layout_weight="1"
+						 android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0.00"/>
+						<TextView android:gravity="center_horizontal"
+						android:textColor="@android:color/white" android:layout_weight="1"
+						 android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="="/>
+						 <LinearLayout android:layout_weight="1"   android:layout_width="wrap_content" android:layout_height="wrap_content" >
+						<TextView android:gravity="center_horizontal" 
+						android:textColor="@android:color/white" 
+						 android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="2634.40"/>
+						 	<TextView android:gravity="center_horizontal" 
+						android:textColor="@android:color/white" 
+						 android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="元"/>
+						 </LinearLayout>
+					</LinearLayout>
+			
+					<LinearLayout android:layout_height="wrap_content" android:gravity="center_vertical"
+						android:background="@drawable/query_model_bottom"  android:layout_marginLeft="10dp"
+						android:layout_width="wrap_content" android:orientation="horizontal">
+						<TextView android:gravity="center_horizontal" android:layout_marginLeft="100dp"
+						android:textColor="@android:color/white" 
+						android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=""/>
+						<TextView android:gravity="center_horizontal"
+						android:textColor="@android:color/white" android:textSize="10dp"
+						android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="原价："/>
+						<TextView android:gravity="center_horizontal"
+						android:textColor="@android:color/white" android:textSize="10dp"
+						 android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="5437.33"/>
+						<TextView android:gravity="center_horizontal"
+						android:textColor="@android:color/white" android:textSize="10dp"
+						 android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="元"/>
+						<TextView android:gravity="center_horizontal"
+						android:textColor="@android:color/white"  android:textSize="10dp"
+						 android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="为你省去"/>
+						<TextView android:gravity="center_horizontal"
+						android:textColor="@android:color/white" android:textSize="10dp"
+						 android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="2802.93"/>
+						<TextView android:gravity="center_horizontal"
+						android:textColor="@android:color/white" android:textSize="10dp"
+						 android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="元"/>
+					</LinearLayout>
+			
+			</LinearLayout>
+
+
+	<include layout="@layout/footer" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+		</LinearLayout>
+</LinearLayout>

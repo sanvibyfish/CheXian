@@ -291,7 +291,7 @@ public class ModelQueryActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 				licenseNo = editTextLicenseNo.getText().toString();
-				cityCode = "110100";
+				cityCode = currentCity.cityCode;
 				registerDate = btnRegisterDate.getText().toString();
 				model = editTextModel.getText().toString().toUpperCase();
 				bizQuoteBeginDate = btnBusinessInsurance.getText().toString();

@@ -24,6 +24,7 @@ public class ModelQueryModelsActivity extends Activity {
 	private ListView lvModels;
 	private ModelAdapter adapter;
 	private Button btnBack;
+	private Button btnNext;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -53,6 +54,15 @@ public class ModelQueryModelsActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 				ActivityUtils.back(ModelQueryModelsActivity.this, getIntent());
+			}
+		});
+		
+		btnNext = (Button)findViewById(R.id.footer_next_button);
+		btnNext.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				ActivityUtils.jump(ModelQueryModelsActivity.this, SaveApplyInfoActivity.class, ActivityUtils.SAVE_APPLY_INFO);
 			}
 		});
 	}
