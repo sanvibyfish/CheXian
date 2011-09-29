@@ -1,0 +1,447 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:background="@drawable/confirm_apply_info_bg"
+	android:layout_height="fill_parent">
+
+	<!-- 标题 -->
+	<LinearLayout android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:background="@drawable/confirm_apply_info_title_bg">
+		<TextView android:layout_width="wrap_content"
+			android:textColor="@android:color/black" android:layout_gravity="center_vertical"
+			android:paddingLeft="15dp" android:layout_height="wrap_content"
+			android:text="核保确认" android:textSize="18dp" />
+	</LinearLayout>
+
+<ScrollView android:layout_width="wrap_content" android:layout_height="wrap_content">
+	<LinearLayout android:layout_width="fill_parent"
+		android:orientation="vertical" android:layout_height="wrap_content">
+		<!-- 车辆信息 -->
+		<LinearLayout android:orientation="vertical"
+			android:layout_marginTop="10dp" android:layout_marginLeft="10dp"
+			android:layout_height="wrap_content" android:layout_width="wrap_content">
+
+			<!-- 车辆信息 -->
+			<RelativeLayout android:layout_width="wrap_content"
+				android:layout_height="wrap_content">
+				<LinearLayout android:layout_height="wrap_content"
+					android:layout_marginTop="23dp" android:background="@drawable/item_top_button"
+					android:layout_width="wrap_content" android:orientation="horizontal">
+					<RelativeLayout android:layout_width="wrap_content"
+						android:layout_gravity="center_vertical" android:layout_height="wrap_content">
+						<TextView android:paddingLeft="15dp" android:textColor="@android:color/black"
+							android:layout_width="wrap_content" android:layout_height="wrap_content"
+							android:text="车牌号码" />
+
+						<TextView android:textColor="#f6a444"
+							android:layout_alignParentRight="true" android:layout_width="wrap_content"
+							android:layout_marginRight="15dp" android:layout_height="wrap_content"
+							android:text="粤B*" />
+					</RelativeLayout>
+				</LinearLayout>
+				<LinearLayout android:background="@drawable/confirm_apply_info_content_title"
+					android:layout_height="wrap_content" android:gravity="center"
+					android:layout_marginLeft="5dp" android:layout_width="wrap_content">
+					<TextView android:layout_height="wrap_content"
+						android:textColor="@android:color/black" android:layout_width="wrap_content"
+						android:text="车主信息" android:textSize="12dp" />
+				</LinearLayout>
+
+			</RelativeLayout>
+
+
+			<!-- 厂牌型号 -->
+			<LinearLayout android:layout_height="wrap_content"
+				android:background="@drawable/item_center_button"
+				android:layout_width="wrap_content" android:orientation="horizontal">
+				<RelativeLayout android:layout_width="wrap_content"
+					android:layout_gravity="center_vertical" android:layout_height="wrap_content">
+					<TextView android:paddingLeft="15dp" android:textColor="@android:color/black"
+						android:layout_width="wrap_content" android:layout_height="wrap_content"
+						android:text="厂牌型号" />
+
+					<TextView android:textColor="#f6a444"
+						android:layout_alignParentRight="true" android:layout_width="wrap_content"
+						android:layout_marginRight="15dp" android:layout_height="wrap_content"
+						android:text="粤B*" />
+				</RelativeLayout>
+			</LinearLayout>
+
+			<!-- 车架号 -->
+			<LinearLayout android:layout_height="wrap_content"
+				android:background="@drawable/item_center_button"
+				android:layout_width="wrap_content" android:orientation="horizontal">
+				<RelativeLayout android:layout_width="wrap_content"
+					android:layout_gravity="center_vertical" android:layout_height="wrap_content">
+					<TextView android:paddingLeft="15dp" android:textColor="@android:color/black"
+						android:layout_width="wrap_content" android:layout_height="wrap_content"
+						android:text="车架号" />
+
+					<TextView android:textColor="#f6a444"
+						android:layout_alignParentRight="true" android:layout_width="wrap_content"
+						android:layout_marginRight="15dp" android:layout_height="wrap_content"
+						android:text="LGKH32G2989169632" />
+				</RelativeLayout>
+			</LinearLayout>
+
+			<!-- 发动机号 -->
+			<LinearLayout android:layout_height="wrap_content"
+				android:background="@drawable/item_center_button"
+				android:layout_width="wrap_content" android:orientation="horizontal">
+				<RelativeLayout android:layout_width="wrap_content"
+					android:layout_gravity="center_vertical" android:layout_height="wrap_content">
+					<TextView android:paddingLeft="15dp" android:textColor="@android:color/black"
+						android:layout_width="wrap_content" android:layout_height="wrap_content"
+						android:text="发动机号" />
+
+					<TextView android:textColor="#f6a444"
+						android:layout_alignParentRight="true" android:layout_width="wrap_content"
+						android:layout_marginRight="15dp" android:layout_height="wrap_content"
+						android:text="LGKH32G2989169632" />
+				</RelativeLayout>
+			</LinearLayout>
+			<!-- 车辆登记日期 -->
+			<LinearLayout android:layout_height="wrap_content"
+				android:background="@drawable/item_center_button"
+				android:layout_width="wrap_content" android:orientation="horizontal">
+				<RelativeLayout android:layout_width="wrap_content"
+					android:layout_gravity="center_vertical" android:layout_height="wrap_content">
+					<TextView android:paddingLeft="15dp" android:textColor="@android:color/black"
+						android:layout_width="wrap_content" android:layout_height="wrap_content"
+						android:text="车辆登记日期" />
+
+					<TextView android:textColor="#f6a444"
+						android:layout_alignParentRight="true" android:layout_width="wrap_content"
+						android:layout_marginRight="15dp" android:layout_height="wrap_content"
+						android:text="2011-08" />
+				</RelativeLayout>
+			</LinearLayout>
+
+			<!-- 座位数 -->
+			<LinearLayout android:layout_height="wrap_content"
+				android:background="@drawable/item_bottom_button"
+				android:layout_width="wrap_content" android:orientation="horizontal">
+				<RelativeLayout android:layout_width="wrap_content"
+					android:layout_gravity="center_vertical" android:layout_height="wrap_content">
+					<TextView android:paddingLeft="15dp" android:textColor="@android:color/black"
+						android:layout_width="wrap_content" android:layout_height="wrap_content"
+						android:text="座位数" />
+
+					<TextView android:textColor="#f6a444"
+						android:layout_alignParentRight="true" android:layout_width="wrap_content"
+						android:layout_marginRight="15dp" android:layout_height="wrap_content"
+						android:text="" />
+				</RelativeLayout>
+			</LinearLayout>
+		</LinearLayout>
+
+
+	<!-- 车主信息 -->
+		<LinearLayout android:orientation="vertical"
+			android:layout_marginTop="10dp" android:layout_marginLeft="10dp"
+			android:layout_height="wrap_content" android:layout_width="wrap_content">
+
+			<!-- 姓名 -->
+			<RelativeLayout android:layout_width="wrap_content"
+				android:layout_height="wrap_content">
+				<LinearLayout android:layout_height="wrap_content"
+					android:layout_marginTop="23dp" android:background="@drawable/item_top_button"
+					android:layout_width="wrap_content" android:orientation="horizontal">
+					<RelativeLayout android:layout_width="wrap_content" android:layout_marginLeft="20dp"
+						android:layout_gravity="center_vertical" android:layout_height="wrap_content">
+					<TextView android:paddingRight="15dp"
+						android:background="@drawable/query_model_textview"
+						android:gravity="center_vertical|center_horizontal" android:layout_width="wrap_content"
+						android:layout_height="wrap_content" android:text="姓名" />
+					<EditText android:background="@drawable/model_query_button"
+						android:layout_marginLeft="80dp" android:layout_width="wrap_content"
+						android:layout_height="wrap_content" android:id="@+id/model_query_license_no" />
+					</RelativeLayout>
+				</LinearLayout>
+				<LinearLayout android:background="@drawable/confirm_apply_info_content_title"
+					android:layout_height="wrap_content" android:gravity="center"
+					android:layout_marginLeft="5dp" android:layout_width="wrap_content">
+					<TextView android:layout_height="wrap_content"
+						android:textColor="@android:color/black" android:layout_width="wrap_content"
+						android:text="车主信息" android:textSize="12dp" />
+				</LinearLayout>
+
+			</RelativeLayout>
+
+
+			<!-- 厂牌型号 -->
+			<LinearLayout android:layout_height="wrap_content"
+				android:background="@drawable/item_center_button"
+				android:layout_width="wrap_content" android:orientation="horizontal">
+				<RelativeLayout android:layout_width="wrap_content"  android:layout_marginLeft="20dp"
+					android:layout_gravity="center_vertical" android:layout_height="wrap_content">
+					<TextView android:paddingRight="15dp"
+						android:background="@drawable/query_model_textview"
+						android:gravity="center_vertical|center_horizontal" android:layout_width="wrap_content"
+						android:layout_height="wrap_content" android:text="手机" />
+					<EditText android:background="@drawable/model_query_button"
+						android:layout_marginLeft="80dp" android:layout_width="wrap_content"
+						android:layout_height="wrap_content" android:id="@+id/model_query_license_no" />
+				</RelativeLayout>
+			</LinearLayout>
+
+			<!-- Email -->
+			<LinearLayout android:layout_height="wrap_content"
+				android:background="@drawable/item_bottom_button"
+				android:layout_width="wrap_content" android:orientation="horizontal">
+				<RelativeLayout android:layout_width="wrap_content"  android:layout_marginLeft="20dp"
+					android:layout_gravity="center_vertical" android:layout_height="wrap_content">
+					<TextView android:paddingRight="15dp"
+						android:background="@drawable/query_model_textview"
+						android:gravity="center_vertical|center_horizontal" android:layout_width="wrap_content"
+						android:layout_height="wrap_content" android:text="Email" />
+					<EditText android:background="@drawable/model_query_button"
+						android:layout_marginLeft="80dp" android:layout_width="wrap_content"
+						android:layout_height="wrap_content" android:id="@+id/model_query_license_no" />
+				</RelativeLayout>
+			</LinearLayout>
+		</LinearLayout>
+		
+		
+		<!-- 商业险生效日期 -->
+		<LinearLayout android:orientation="vertical"
+			android:layout_marginTop="10dp" android:layout_marginLeft="10dp"
+			android:layout_height="wrap_content" android:layout_width="wrap_content">
+
+			<!-- 商业险生效日期 -->
+			<RelativeLayout android:layout_width="wrap_content"
+				android:layout_height="wrap_content">
+				<LinearLayout android:layout_height="wrap_content"
+					android:layout_marginTop="23dp" android:background="@drawable/apply_info_button_normal"
+					android:layout_width="wrap_content" android:orientation="horizontal">
+					<RelativeLayout android:layout_width="wrap_content" android:layout_marginLeft="20dp"
+						android:layout_gravity="center_vertical" android:layout_height="wrap_content">
+					<TextView android:textColor="#f6a444" 
+						android:layout_alignParentRight="true" android:layout_width="wrap_content"
+						android:layout_marginRight="15dp" android:layout_height="wrap_content"
+						android:text="自2011-08-15零时起至2011-08-14二十四时止" />
+					</RelativeLayout>
+				</LinearLayout>
+				<LinearLayout android:background="@drawable/confirm_apply_info_content_title_long"
+					android:layout_height="wrap_content" android:gravity="center"
+					android:layout_marginLeft="5dp" android:layout_width="wrap_content">
+					<TextView android:layout_height="wrap_content"
+						android:textColor="@android:color/black" android:layout_width="wrap_content"
+						android:text="商业险生效日期" android:textSize="12dp" />
+				</LinearLayout>
+
+			</RelativeLayout>
+		</LinearLayout>
+		
+		<!-- 交强险生效日期 -->
+		<LinearLayout android:orientation="vertical"
+			android:layout_marginTop="10dp" android:layout_marginLeft="10dp"
+			android:layout_height="wrap_content" android:layout_width="wrap_content">
+
+			<!-- 交强险生效日期 -->
+			<RelativeLayout android:layout_width="wrap_content"
+				android:layout_height="wrap_content">
+				<LinearLayout android:layout_height="wrap_content"
+					android:layout_marginTop="23dp" android:background="@drawable/apply_info_button_normal"
+					android:layout_width="wrap_content" android:orientation="horizontal">
+					<RelativeLayout android:layout_width="wrap_content" android:layout_marginLeft="20dp"
+						android:layout_gravity="center_vertical" android:layout_height="wrap_content">
+					<TextView android:textColor="#f6a444" 
+						android:layout_alignParentRight="true" android:layout_width="wrap_content"
+						android:layout_marginRight="15dp" android:layout_height="wrap_content"
+						android:text="自2011-08-15零时起至2011-08-14二十四时止" />
+					</RelativeLayout>
+				</LinearLayout>
+				<LinearLayout android:background="@drawable/confirm_apply_info_content_title_long"
+					android:layout_height="wrap_content" android:gravity="center"
+					android:layout_marginLeft="5dp" android:layout_width="wrap_content">
+					<TextView android:layout_height="wrap_content"
+						android:textColor="@android:color/black" android:layout_width="wrap_content"
+						android:text="交强险生效日期" android:textSize="12dp" />
+				</LinearLayout>
+
+			</RelativeLayout>
+		</LinearLayout>
+
+	<!-- 保费价格 -->
+		<LinearLayout android:orientation="vertical"
+			android:layout_marginTop="10dp" android:layout_marginLeft="10dp"
+			android:layout_height="wrap_content" android:layout_width="wrap_content">
+
+			<!-- 商业险 -->
+			<RelativeLayout android:layout_width="wrap_content"
+				android:layout_height="wrap_content">
+				<LinearLayout android:layout_height="wrap_content"
+					android:layout_marginTop="23dp" android:background="@drawable/item_top_button"
+					android:layout_width="wrap_content" android:orientation="horizontal">
+					<RelativeLayout android:layout_width="wrap_content"
+						android:layout_gravity="center_vertical" android:layout_height="wrap_content">
+						<TextView android:paddingLeft="15dp" android:textColor="@android:color/black"
+							android:layout_width="wrap_content" android:layout_height="wrap_content"
+							android:text="商业险" />
+
+						<TextView android:textColor="#f6a444"
+							android:layout_alignParentRight="true" android:layout_width="wrap_content"
+							android:layout_marginRight="15dp" android:layout_height="wrap_content"
+							android:text="￥0.00" />
+					</RelativeLayout>
+				</LinearLayout>
+				<LinearLayout android:background="@drawable/confirm_apply_info_content_title"
+					android:layout_height="wrap_content" android:gravity="center"
+					android:layout_marginLeft="5dp" android:layout_width="wrap_content">
+					<TextView android:layout_height="wrap_content"
+						android:textColor="@android:color/black" android:layout_width="wrap_content"
+						android:text="保费价格" android:textSize="12dp" />
+				</LinearLayout>
+
+			</RelativeLayout>
+
+
+			<!-- 交强险 -->
+			<LinearLayout android:layout_height="wrap_content"
+				android:background="@drawable/item_center_button"
+				android:layout_width="wrap_content" android:orientation="horizontal">
+				<RelativeLayout android:layout_width="wrap_content"
+					android:layout_gravity="center_vertical" android:layout_height="wrap_content">
+					<TextView android:paddingLeft="15dp" android:textColor="@android:color/black"
+						android:layout_width="wrap_content" android:layout_height="wrap_content"
+						android:text="交强险" />
+
+					<TextView android:textColor="#f6a444"
+						android:layout_alignParentRight="true" android:layout_width="wrap_content"
+						android:layout_marginRight="15dp" android:layout_height="wrap_content"
+						android:text="￥950.00" />
+				</RelativeLayout>
+			</LinearLayout>
+
+			<!-- 车船险 -->
+			<LinearLayout android:layout_height="wrap_content"
+				android:background="@drawable/item_center_button"
+				android:layout_width="wrap_content" android:orientation="horizontal">
+				<RelativeLayout android:layout_width="wrap_content"
+					android:layout_gravity="center_vertical" android:layout_height="wrap_content">
+					<TextView android:paddingLeft="15dp" android:textColor="@android:color/black"
+						android:layout_width="wrap_content" android:layout_height="wrap_content"
+						android:text="车船险" />
+
+					<TextView android:textColor="#f6a444"
+						android:layout_alignParentRight="true" android:layout_width="wrap_content"
+						android:layout_marginRight="15dp" android:layout_height="wrap_content"
+						android:text="￥140.00" />
+				</RelativeLayout>
+			</LinearLayout>
+
+			<!-- 发动机号 -->
+			<LinearLayout android:layout_height="wrap_content"
+				android:background="@drawable/item_center_button"
+				android:layout_width="wrap_content" android:orientation="horizontal">
+				<RelativeLayout android:layout_width="wrap_content"
+					android:layout_gravity="center_vertical" android:layout_height="wrap_content">
+					<TextView android:paddingLeft="15dp" android:textColor="@android:color/black"
+						android:layout_width="wrap_content" android:layout_height="wrap_content"
+						android:text="发动机号" />
+
+					<TextView android:textColor="#f6a444"
+						android:layout_alignParentRight="true" android:layout_width="wrap_content"
+						android:layout_marginRight="15dp" android:layout_height="wrap_content"
+						android:text="LGKH32G2989169632" />
+				</RelativeLayout>
+			</LinearLayout>
+			<!-- 车辆登记日期 -->
+			<LinearLayout android:layout_height="wrap_content"
+				android:background="@drawable/item_center_button"
+				android:layout_width="wrap_content" android:orientation="horizontal">
+				<RelativeLayout android:layout_width="wrap_content"
+					android:layout_gravity="center_vertical" android:layout_height="wrap_content">
+					<TextView android:paddingLeft="15dp" android:textColor="@android:color/black"
+						android:layout_width="wrap_content" android:layout_height="wrap_content"
+						android:text="车辆登记日期" />
+
+					<TextView android:textColor="#f6a444"
+						android:layout_alignParentRight="true" android:layout_width="wrap_content"
+						android:layout_marginRight="15dp" android:layout_height="wrap_content"
+						android:text="2011-08" />
+				</RelativeLayout>
+			</LinearLayout>
+
+			<!-- 座位数 -->
+			<LinearLayout android:layout_height="wrap_content"
+				android:background="@drawable/item_bottom_button"
+				android:layout_width="wrap_content" android:orientation="horizontal">
+				<RelativeLayout android:layout_width="wrap_content"
+					android:layout_gravity="center_vertical" android:layout_height="wrap_content">
+					<TextView android:paddingLeft="15dp" android:textColor="@android:color/black"
+						android:layout_width="wrap_content" android:layout_height="wrap_content"
+						android:text="座位数" />
+
+					<TextView android:textColor="#f6a444"
+						android:layout_alignParentRight="true" android:layout_width="wrap_content"
+						android:layout_marginRight="15dp" android:layout_height="wrap_content"
+						android:text="" />
+				</RelativeLayout>
+			</LinearLayout>
+		</LinearLayout>
+		
+	<!-- 保费合计-->
+		<LinearLayout android:orientation="vertical"
+			android:layout_marginTop="10dp" android:layout_marginLeft="10dp"
+			android:layout_height="wrap_content" android:layout_width="wrap_content">
+
+			<!-- 优惠价 -->
+			<RelativeLayout android:layout_width="wrap_content"
+				android:layout_height="wrap_content">
+				<LinearLayout android:layout_height="wrap_content"
+					android:layout_marginTop="23dp" android:background="@drawable/item_top_button"
+					android:layout_width="wrap_content" android:orientation="horizontal">
+					<RelativeLayout android:layout_width="wrap_content"
+						android:layout_gravity="center_vertical" android:layout_height="wrap_content">
+						<TextView android:paddingLeft="15dp" android:textColor="@android:color/black"
+							android:layout_width="wrap_content" android:layout_height="wrap_content"
+							android:text="优惠价" />
+
+						<TextView android:textColor="#f6a444"
+							android:layout_alignParentRight="true" android:layout_width="wrap_content"
+							android:layout_marginRight="15dp" android:layout_height="wrap_content"
+							android:text="￥1090.00" />
+					</RelativeLayout>
+				</LinearLayout>
+				<LinearLayout android:background="@drawable/confirm_apply_info_content_title"
+					android:layout_height="wrap_content" android:gravity="center"
+					android:layout_marginLeft="5dp" android:layout_width="wrap_content">
+					<TextView android:layout_height="wrap_content"
+						android:textColor="@android:color/black" android:layout_width="wrap_content"
+						android:text="保费合计" android:textSize="12dp" />
+				</LinearLayout>
+
+			</RelativeLayout>
+
+			<!-- 优惠 -->
+			<LinearLayout android:layout_height="wrap_content"
+				android:background="@drawable/item_bottom_button"
+				android:layout_width="wrap_content" android:orientation="horizontal">
+					<TextView android:paddingLeft="15dp" android:textColor="@android:color/black"
+						android:layout_width="wrap_content" android:layout_height="wrap_content"
+						android:text="原价" />
+					<TextView android:textColor="#f6a444"
+						android:layout_alignParentRight="true" android:layout_width="wrap_content"
+						android:layout_marginRight="15dp" android:layout_height="wrap_content"
+						android:text="￥1090.00" />
+					<TextView  android:textColor="@android:color/black"
+						android:layout_alignParentRight="true" android:layout_width="wrap_content"
+						android:layout_marginRight="15dp" android:layout_height="wrap_content"
+						android:text="为你省去" />
+					<TextView android:textColor="#f6a444"
+						android:layout_alignParentRight="true" android:layout_width="wrap_content"
+						android:layout_marginRight="15dp" android:layout_height="wrap_content"
+						android:text="￥0.00" />
+			</LinearLayout>
+		</LinearLayout>
+	
+		<Button 
+		android:layout_marginTop="10dp"
+		 android:layout_width="wrap_content" android:text="确认" android:background="@drawable/apply_info_button"
+					android:layout_gravity="center_vertical" android:layout_height="wrap_content" />
+	</LinearLayout>
+</ScrollView>
+
+</LinearLayout>

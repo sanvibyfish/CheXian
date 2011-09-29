@@ -140,26 +140,17 @@
 
 
 
-		<!-- 车主信息 -->
+			<!-- 被保信息 -->
 			<LinearLayout android:orientation="vertical" android:layout_marginTop="10dp"
 				android:layout_height="wrap_content" android:layout_width="wrap_content">
 
-				<!-- 车主信息 -->
+				<!-- 被保信息 -->
 				<RelativeLayout android:layout_width="wrap_content"
 					android:layout_height="wrap_content">
-					<LinearLayout android:background="@drawable/content_title"
-						android:layout_height="wrap_content" android:gravity="center"
-						android:layout_width="wrap_content">
-						<TextView android:layout_height="wrap_content"
-							android:layout_width="wrap_content" android:text="被保信息"
-							 android:textSize="12dp"  />
-					</LinearLayout>
-
-				</RelativeLayout>
-				
+					
 				<!-- 姓名 -->
 				<LinearLayout android:layout_height="wrap_content"
-					android:background="@drawable/query_model_middle"
+					android:background="@drawable/query_model_middle" android:layout_marginTop="25dp"
 					android:layout_width="wrap_content" android:orientation="horizontal">
 					<RelativeLayout android:layout_width="wrap_content"
 						android:layout_marginLeft="10dp" android:layout_marginTop="7dp"
@@ -174,6 +165,42 @@
 							android:layout_height="wrap_content" />
 					</RelativeLayout>
 				</LinearLayout>
+				
+				<LinearLayout  android:orientation="horizontal"
+						android:layout_height="wrap_content" 
+						android:layout_width="wrap_content">
+					<LinearLayout android:background="@drawable/content_title" android:orientation="horizontal"
+						android:layout_height="wrap_content" android:gravity="center"
+						android:layout_width="wrap_content">
+						<TextView android:layout_height="wrap_content"
+							android:layout_width="wrap_content" android:text="被保信息"
+							 android:textSize="12dp"  />
+					</LinearLayout>
+					
+						<TextView android:layout_height="wrap_content" android:layout_gravity="center_vertical"
+							android:layout_width="wrap_content" android:text="是否为车主" android:layout_marginBottom="10dp"
+							 android:textSize="12dp"  />
+							 
+						<RadioGroup android:orientation="horizontal" 
+						android:id="@+id/save_apply_infi_radio_is_car_own_group"
+						  android:layout_marginTop="-8dp" android:layout_marginLeft="5dp"
+							android:layout_height="wrap_content" android:layout_width="wrap_content">
+							<RadioButton android:layout_width="wrap_content"
+								android:paddingLeft="15dp" android:text="是"
+								android:textSize="12dp"  android:id="@+id/save_apply_info_radio_is_car_own_yes"
+								 android:button="@drawable/radio"
+								android:layout_marginBottom="15dp" />
+							<RadioButton android:paddingLeft="15dp" android:text="否"
+							android:textSize="12dp" android:id="@+id/save_apply_info_radio_is_car_own_no"
+								android:button="@drawable/radio" />
+						</RadioGroup>
+						
+						
+				</LinearLayout>
+				
+				
+				</RelativeLayout>
+				
 				
 				<LinearLayout android:layout_height="wrap_content"
 					android:background="@drawable/xian" android:layout_width="wrap_content">
@@ -202,7 +229,7 @@
 				</LinearLayout>
 				
 				<!-- 证件号码 -->
-				<LinearLayout android:layout_height="wrap_content"
+				<LinearLayout android:layout_height="wrap_content" android:id="@+id/save_apply_info_id_card_no_layout"
 					android:background="@drawable/query_model_middle"
 					android:layout_width="wrap_content" android:orientation="horizontal">
 					<RelativeLayout android:layout_width="wrap_content"
@@ -219,12 +246,12 @@
 					</RelativeLayout>
 				</LinearLayout>
 				
-												<LinearLayout android:layout_height="wrap_content"
-					android:background="@drawable/xian" android:layout_width="wrap_content">
-				</LinearLayout>
+				<ImageView android:layout_height="wrap_content" android:id="@+id/save_apply_info_after_card_no_line"
+					android:src="@drawable/xian" android:layout_width="wrap_content">
+				</ImageView>
 				
 				<!-- 手机 -->
-				<LinearLayout android:layout_height="wrap_content"
+				<LinearLayout android:layout_height="wrap_content" android:id="@+id/save_apply_info_mobile_layout"
 					android:background="@drawable/query_model_middle"
 					android:layout_width="wrap_content" android:orientation="horizontal">
 					<RelativeLayout android:layout_width="wrap_content"
@@ -246,7 +273,7 @@
 				</LinearLayout>
 				
 				<!-- Email -->
-				<LinearLayout android:layout_height="wrap_content"
+				<LinearLayout android:layout_height="wrap_content" android:id="@+id/save_apply_info_email_layout"
 					android:background="@drawable/query_model_bottom"
 					android:layout_width="wrap_content" android:orientation="horizontal">
 					<RelativeLayout android:layout_width="wrap_content"
