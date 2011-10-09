@@ -43,7 +43,7 @@ public class ModelQueryModelsActivity extends Activity {
 
 		lvModels = (ListView) findViewById(R.id.model_query_models_list_view);
 		Bundle bundle = getIntent().getExtras();
-		ModelQuery mq = (ModelQuery) bundle
+		final ModelQuery mq = (ModelQuery) bundle
 				.getSerializable(ModelQueryActivity.MODEL_QUERY);
 		adapter = new ModelAdapter(this, mq.models);
 		lvModels.setAdapter(adapter);
@@ -62,7 +62,9 @@ public class ModelQueryModelsActivity extends Activity {
 			
 			@Override
 			public void onClick(View v) {
-				ActivityUtils.jump(ModelQueryModelsActivity.this, SaveApplyInfoActivity.class, ActivityUtils.SAVE_APPLY_INFO);
+				Bundle bundle = new Bundle();
+				bundle.putSerializable(ModelQueryActivity.MODEL_QUERY, mq);
+				ActivityUtils.jump(ModelQueryModelsActivity.this, InfoPlusActivity.class, ActivityUtils.INFO_PLUS, bundle);
 			}
 		});
 	}

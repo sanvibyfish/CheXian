@@ -8,12 +8,12 @@ public class ModelQuery implements Result, Serializable{
 	public int resultCode;
 	public String name;
 	public String flowid;
-	public String supervisorBlock;
+	public int supervisorBlock;
 	public List<Model> models;
 	public String shenZhenTaxBlock;
 	public List<Input> inputs;
 	public TaxPrompt taxPrompt;
-	public String otherInfoBlock;
+	public int otherInfoBlock;
 	
 	
 }

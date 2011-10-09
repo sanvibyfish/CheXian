@@ -26,6 +26,8 @@ public class ActivityUtils {
 	public static final int CHE_XIAN_ACITVITY = 11;
 	public static final int MODEL_QUERY_MODELS_ACTIVITY = 12;
 	public static final int SAVE_APPLY_INFO = 13;
+	public static final int INFO_PLUS = 14;
+	
 	
 	private static final String TAG = "ActivityUtils";
 	private static final boolean DEBUG = Settings.DEBUG; 

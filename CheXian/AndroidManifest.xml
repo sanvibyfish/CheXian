@@ -6,7 +6,7 @@
     <uses-sdk android:minSdkVersion="7" />
 
     <application android:icon="@drawable/icon" android:label="@string/app_name" android:theme="@android:style/Theme.NoTitleBar">
-        <activity android:name=".ConfirmApplyInfoActivity" 
+        <activity android:name=".ModelQueryActivity" 
                   android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -17,7 +17,9 @@
 	<activity android:name="CheXianActivity"></activity>
 	<activity android:name="ModelQueryModelsActivity"></activity>
 	<activity android:name="SaveApplyInfoActivity"></activity>
-	<activity android:name="ModelQueryActivity"></activity>
+	<activity android:name="ConfirmApplyInfoActivity"></activity>
+	<activity android:name="InfoPlusActivity"></activity>
+	
 	
     </application>
     	<uses-permission android:name="android.permission.INTERNET" />

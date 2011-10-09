@@ -32,7 +32,9 @@ import com.xrl.chexian.model.City;
 import com.xrl.chexian.model.ModelQuery;
 import com.xrl.chexian.task.ModelQueryTask;
 import com.xrl.chexian.utils.ActivityUtils;
+import com.xrl.chexian.utils.SharedPreferencesUtils;
 import com.xrl.chexian.utils.StringUtils;
+import com.xrl.chexian.utils.gson.GsonUtils;
 import com.xrl.chexian.widget.ValidationEditText;
 
 public class ModelQueryActivity extends Activity {
@@ -101,15 +103,15 @@ public class ModelQueryActivity extends Activity {
 				mDay += 2;
 				Toast.makeText(ModelQueryActivity.this, "商业险起期通常为上年保单到期日后第二天",Toast.LENGTH_SHORT).show();
 				btnBusinessInsurance.setText(new StringBuilder().append(mYear)
-						.append("-").append((mMonth + 1)>10?(mMonth + 1):"0" + (mMonth + 1)).append("-").append(mDay));
+						.append("-").append((mMonth + 1)>=10?(mMonth + 1):"0" + (mMonth + 1)).append("-").append(mDay));
 			}else if(nowDay > mDay){
 				mDay = nowDay;
 				Toast.makeText(ModelQueryActivity.this, "不能选择今天之前的日期",Toast.LENGTH_SHORT).show();
 				btnBusinessInsurance.setText(new StringBuilder().append(mYear)
-						.append("-").append((mMonth + 1)>10?(mMonth + 1):"0" + (mMonth + 1)).append("-").append(mDay));
+						.append("-").append((mMonth + 1)>=10?(mMonth + 1):"0" + (mMonth + 1)).append("-").append(mDay));
 			}else{
 				btnBusinessInsurance.setText(new StringBuilder().append(mYear)
-						.append("-").append((mMonth + 1)>10?(mMonth + 1):"0" + (mMonth + 1)).append("-").append(mDay));
+						.append("-").append((mMonth + 1)>=10?(mMonth + 1):"0" + (mMonth + 1)).append("-").append(mDay));
 			}
 		}
 	};
@@ -129,15 +131,15 @@ public class ModelQueryActivity extends Activity {
 				mDay += 2;
 				Toast.makeText(ModelQueryActivity.this, "商业险起期通常为上年保单到期日后第二天",Toast.LENGTH_SHORT).show();
 				btnInsurance.setText(new StringBuilder().append(mYear).append("-")
-						.append((mMonth + 1)>10?(mMonth + 1):"0" + (mMonth + 1)).append("-").append(mDay));
+						.append((mMonth + 1)>=10?(mMonth + 1):"0" + (mMonth + 1)).append("-").append(mDay));
 			}else if(nowDay > mDay){
 				mDay = nowDay;
 				Toast.makeText(ModelQueryActivity.this, "不能选择今天之前的日期",Toast.LENGTH_SHORT).show();
 				btnInsurance.setText(new StringBuilder().append(mYear)
-						.append("-").append((mMonth + 1)>10?(mMonth + 1):"0" + (mMonth + 1)).append("-").append(mDay));
+						.append("-").append((mMonth + 1)>=10?(mMonth + 1):"0" + (mMonth + 1)).append("-").append(mDay));
 			}else{
 				btnInsurance.setText(new StringBuilder().append(mYear).append("-")
-						.append((mMonth + 1)>10?(mMonth + 1):"0" + (mMonth + 1)).append("-").append(mDay));
+						.append((mMonth + 1)>=10?(mMonth + 1):"0" + (mMonth + 1)).append("-").append(mDay));
 			}
 		}
 	};
@@ -150,7 +152,7 @@ public class ModelQueryActivity extends Activity {
 			mMonth = monthOfYear;
 			mDay = dayOfMonth;
 			btnRegisterDate.setText(new StringBuilder().append(mYear)
-					.append("-").append((mMonth + 1)>10?(mMonth + 1):"0" + (mMonth + 1)));
+					.append("-").append((mMonth + 1)>=10?(mMonth + 1):"0" + (mMonth + 1)));
 
 		}
 	};
@@ -216,6 +218,8 @@ public class ModelQueryActivity extends Activity {
 					public void onClick(DialogInterface dialog, int which) {
 						// a choice has been made!
 						currentCity = (City) cityAdapter.getItem(which);
+						SharedPreferencesUtils.getInstance(ModelQueryActivity.this).set(SharedPreferencesUtils.CITY,
+								GsonUtils.getInstance().bean2json(currentCity));
 						Log.d("ModelQueryActivity", "chosen " + currentCity.text );
 						btnQueryModelCity.setText(currentCity.text);
 						editTextLicenseNo.setText(currentCity.carNo);
@@ -308,8 +312,8 @@ public class ModelQueryActivity extends Activity {
 						ModelQuery modelQuery = (ModelQuery) modelQueryTask.getResult();
 						Bundle bundle = new Bundle();
 						bundle.putSerializable(MODEL_QUERY, modelQuery);
-						ActivityUtils.jump(ModelQueryActivity.this, ModelQueryModelsActivity.class, ActivityUtils.MODEL_QUERY_MODELS_ACTIVITY,bundle);
-						
+						ActivityUtils.jump(ModelQueryActivity.this, ModelQueryModelsActivity.class,
+								ActivityUtils.MODEL_QUERY_MODELS_ACTIVITY,bundle);
 					}
 				});
 
