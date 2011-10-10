@@ -33,7 +33,9 @@
 		android:id="@+id/model_query_models_list_view" 
 		android:layout_width="fill_parent" android:layout_height="fill_parent"  />
 		
-		<include layout="@layout/footer" android:layout_width="fill_parent" android:layout_height="wrap_content"/>		
+		<include 
+		android:layout_marginLeft="9dp"
+		layout="@layout/footer" android:layout_width="fill_parent" android:layout_height="wrap_content"/>		
 	</LinearLayout>
 	
 </LinearLayout>

@@ -4,10 +4,10 @@
   android:orientation="vertical"
   android:layout_width="fill_parent"
   android:layout_height="fill_parent">
-		<Button android:layout_marginLeft="9dp" android:id="@+id/footer_back_button" android:textColor="@android:color/white"
+		<Button android:id="@+id/footer_back_button" android:textColor="@android:color/white"
 		android:text="上一步" android:background="@drawable/step_button" android:layout_marginTop="5dp"
 		 android:layout_height="wrap_content" android:layout_width="wrap_content"/>
-		<Button android:layout_marginLeft="9dp" android:id="@+id/footer_next_button" android:textColor="@android:color/white"
+		<Button android:id="@+id/footer_next_button" android:textColor="@android:color/white"
 		android:text="下一步" android:background="@drawable/step_button" android:layout_marginTop="5dp"
 		 android:layout_height="wrap_content" android:layout_width="wrap_content"/>
 </LinearLayout>

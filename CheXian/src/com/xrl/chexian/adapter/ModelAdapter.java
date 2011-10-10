@@ -33,7 +33,7 @@ public class ModelAdapter extends BaseAdapter {
 
 	private Context context;
 	 ViewHolder holder = null;
-	 Integer positionSelected;
+	public Integer positionSelected;
 	public ModelAdapter(Context c ,List<Model> models) {
 	   this.context = c;
 	   this.models = models;

@@ -11,6 +11,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.xrl.chexian.adapter.ModelAdapter;
 import com.xrl.chexian.adapter.ModelAdapter.ViewHolder;
@@ -25,6 +26,7 @@ public class ModelQueryModelsActivity extends Activity {
 	private ModelAdapter adapter;
 	private Button btnBack;
 	private Button btnNext;
+	public static final String SELECTED_MODEL = "selectedModel";
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -39,7 +41,7 @@ public class ModelQueryModelsActivity extends Activity {
 		textViewTitle.setText("车型选择");
 		imgTitleProgress = (ImageView) findViewById(R.id.title_progress);
 		imgTitleProgress
-				.setImageResource(R.drawable.model_query_models_progress);
+				.setImageResource(R.drawable.progress_2);
 
 		lvModels = (ListView) findViewById(R.id.model_query_models_list_view);
 		Bundle bundle = getIntent().getExtras();
@@ -64,7 +66,18 @@ public class ModelQueryModelsActivity extends Activity {
 			public void onClick(View v) {
 				Bundle bundle = new Bundle();
 				bundle.putSerializable(ModelQueryActivity.MODEL_QUERY, mq);
-				ActivityUtils.jump(ModelQueryModelsActivity.this, InfoPlusActivity.class, ActivityUtils.INFO_PLUS, bundle);
+				if(adapter.positionSelected != null){
+					bundle.putSerializable(SELECTED_MODEL, mq.models.get(adapter.positionSelected));
+				}else{
+					Toast.makeText(ModelQueryModelsActivity.this, "请选择一款车型", Toast.LENGTH_SHORT).show();
+					return;
+				}
+				
+				if(mq.otherInfoBlock == 0&& mq.supervisorBlock == 0 ){
+					ActivityUtils.jump(ModelQueryModelsActivity.this, SaveApplyInfoActivity.class, ActivityUtils.SAVE_APPLY_INFO);
+				}else{
+					ActivityUtils.jump(ModelQueryModelsActivity.this, InfoPlusActivity.class, ActivityUtils.INFO_PLUS, bundle);
+				}
 			}
 		});
 	}
